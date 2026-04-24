@@ -1,0 +1,39 @@
+'use client'
+
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import UslugiContent from './UslugiContent'
+
+export default function Uslugi() {
+	useEffect(() => {
+		AOS.init({
+			duration: 800,
+			once: true,
+		})
+	}, [])
+	return (
+		<section className='h-auto bg-pearl_perfect' id='uslugi'>
+			<div className='flex flex-col  h-full w-full max-w-7xl mx-auto px-10 py-20'>
+				<div
+					className='flex gap-2 text-[11px] text-black/80 uppercase tracking-[.12em] mb-4 before:content-["<"] before:mr-2 before:opacity-50 after:content-[">"] after:ml-2 after:opacity-50'
+					data-aos='fade-up'>
+					Usługi
+				</div>
+				<div className='flex flex-col gap-5 md:flex-row md:justify-between'>
+					<h2 className='text-midnight text-4xl lg:text-6xl font-playfair_display font-bold' data-aos='fade-left'>
+						Buduję narzędzia,{' '}
+						<span className='text-green block'>
+							<span className='text-midnight'>które</span> pracują
+						</span>{' '}
+						za Ciebie.
+					</h2>
+					<p className='flex items-center text-black/60 max-w-100' data-aos='fade-right'>
+						Każdy projekt to indywidualne rozwiązanie — nie szablon z bazy. Zanim zacznę kodować, poznam Twój biznes i cel. Dopiero wtedy buduję.{' '}
+					</p>
+				</div>
+				<UslugiContent />
+			</div>
+		</section>
+	)
+}

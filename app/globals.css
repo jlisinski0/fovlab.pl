@@ -1,26 +1,49 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+	scroll-behavior: smooth;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+	--color-midnight: #122c4f;
+	--color-pearl_perfect: #fbf9e4;
+	--color-black: #000000;
+	--color-white: #f5f4f4;
+	--color-green: #1e6e2e;
+	--color-light_green: #7eda8a;
+	--color-grey: #eeecec;
+	--color-midnight: #122c4f;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+	--color-whiteTwo: rgba(251, 249, 228, 0.06);
+	--color-black_green: rgba(123, 218, 138, 0.12);
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	--color-border_green: rgba(123, 218, 138, 0.3);
+	--color-light_grey: rgba(18, 44, 79, 0.05);
+	--font-bad_script: var(--font-bad_script-mono);
+	--font-playfair_display: var(--font-playfair_display-sans);
+	--animate-tickerscroll: tickerScroll 30s linear infinite;
+	--animate-moveUp: moveUp 3s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+
+	@keyframes tickerScroll {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
+
+	@keyframes moveUp {
+		0% {
+			transform: translateY(0);
+		}
+
+		50% {
+			transform: translateY(-15px);
+		}
+
+		100% {
+			transform: translateY(0);
+		}
+	}
 }
