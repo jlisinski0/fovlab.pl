@@ -30,8 +30,12 @@ export default function HeaderLeft() {
 				</p>
 			</div>
 			<div className='flex flex-wrap gap-2 pt-5'>
-				<a className='px-6 py-2 text-center bg-light_green text-midnight text-sm font-medium rounded-2xl cursor-pointer hover:-translate-y-1 duration-300 transition-transform'>Zobacz realizacje</a>
-				<a className='px-6 py-2 text-center bg-midnight text-light_green border-light_green border text-sm font-medium rounded-2xl cursor-pointer hover:bg-light_green hover:text-midnight duration-300 transition-colors'>
+				<a href='#portfolio' className='px-6 py-2 text-center bg-light_green text-midnight text-sm font-medium rounded-2xl cursor-pointer hover:-translate-y-1 duration-300 transition-transform'>
+					Zobacz realizacje
+				</a>
+				<a
+					href='#kontakt'
+					className='px-6 py-2 text-center bg-midnight text-light_green border-light_green border text-sm font-medium rounded-2xl cursor-pointer hover:bg-light_green hover:text-midnight duration-300 transition-colors'>
 					Bezpłatna konsultacja
 				</a>
 			</div>

@@ -25,3 +25,18 @@ export type uslugiCheckItem = {
 	id: number
 	text: string
 }
+
+export type portfolioItem = {
+	id: number,
+	name: string,
+	category: string
+}
+
+export type portfolioBlockItem = {
+	id: number,
+	type: string
+	heading: string,
+	text: string,
+	category: string
+	href?: string
+}
