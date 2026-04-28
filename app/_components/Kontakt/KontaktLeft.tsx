@@ -1,0 +1,38 @@
+'use client'
+
+import { useEffect } from 'react'
+import KontaktLeftBlock from './KontaktLeftBlock'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+export default function KontaktLeft() {
+	useEffect(() => {
+		AOS.init({
+			duration: 800,
+			once: true,
+		})
+	}, [])
+	return (
+		<div>
+			<div
+				className='flex gap-2 text-[11px] text-black/60 uppercase tracking-[.12em] mb-4 before:content-["<"] before:mr-2 before:opacity-50 after:content-[">"] after:ml-2 after:opacity-50'
+				data-aos='fade-up'>
+				Kontakt
+			</div>
+			<div className='flex flex-col gap-5 '>
+				<h2 className='text-midnight text-4xl lg:text-6xl font-playfair_display font-bold' data-aos='fade-left'>
+					Zróbmy razem coś <span className='text-green'>wyjątkowego</span>
+				</h2>
+				<p className='font-bad_script text-lg lg:text-2xl' data-aos='fade-right'>
+					Porozmawiajmy o Twoim projekcie
+				</p>
+				<p className='text-black/60' data-aos='fade-up' aos-duration='1000'>
+					Wypełnij formularz, a odezwę się w ciągu 24 godzin. Pierwsza konsultacja jest zawsze bezpłatna — opowiem Ci, jak podejdę do Twojego projektu i ile może kosztować.
+				</p>
+			</div>
+			<div className='pt-10' data-aos='fade-up'>
+				<KontaktLeftBlock />
+			</div>
+		</div>
+	)
+}

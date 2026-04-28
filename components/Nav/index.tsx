@@ -15,7 +15,7 @@ export default function Nav() {
 		<>
 			<nav className='bg-pearl_perfect w-full h-18 sticky top-0 border-b-grey border-b z-50'>
 				<div className='flex justify-between w-full h-full max-w-7xl mx-auto px-10'>
-					<a href='#' className='flex items-center w-50'>
+					<a href='/#' className='flex items-center w-50'>
 						<Image src={fov} alt='Logo "fov"' width={70} height={70} style={{ height: 'auto' }} />
 						<p className='font-playfair_display font-bold'>FovLab</p>
 					</a>

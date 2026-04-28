@@ -3,6 +3,7 @@ import { Playfair_Display, Rubik, Bad_Script } from 'next/font/google'
 import './globals.css'
 import Ticker from '@/components/Ticker'
 import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
 
 const playfair_display = Playfair_Display({
 	variable: '--font-playfair_display-sans',
@@ -83,6 +84,7 @@ export default function RootLayout({
 				<Ticker />
 				<Nav />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	)

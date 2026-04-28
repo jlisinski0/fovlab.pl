@@ -1,14 +1,22 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useMemo, useEffect } from 'react'
 import PortfolioBlockTag from './PortfolioBlockTag'
 import { portfolioBlockItems } from '@/data'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 interface Props {
 	active: string
 }
 
 export default function PortfolioBlock({ active }: Props) {
+	useEffect(() => {
+		AOS.init({
+			duration: 800,
+			once: true,
+		})
+	}, [])
 	const filtered = useMemo(() => {
 		if (active === 'all') return portfolioBlockItems
 		return portfolioBlockItems.filter(item => item.category === active)
@@ -21,8 +29,9 @@ export default function PortfolioBlock({ active }: Props) {
 					href={href}
 					target='_blank'
 					rel='noopener noreferrer'
-					className='flex flex-col w-full h-140 lg:h-120 rounded-2xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 cursor-pointer'
+					className='flex flex-col w-full h-140 pb-5 lg:h-120 rounded-2xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 cursor-pointer'
 					key={id}
+					data-aos='fade-right'
 					style={{ border: '1px solid rgba(251,249,228,0.08)' }}>
 					<div className='relative h-[65%] w-full bg-gradient-to-br from-[#1e6e2e] to-[#122C4F] group'>
 						<div className='absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300' />
@@ -37,7 +46,7 @@ export default function PortfolioBlock({ active }: Props) {
 						<p className='text-light_green text-[10px] font-bold tracking-[.12em] uppercase pb-2'>{type}</p>
 						<h4 className='text-2xl text-white font-playfair_display'>{heading}</h4>
 						<p className='text-sm pt-2'>{text}</p>
-						<div className='flex gap-5 pt-4'>
+						<div className='flex  gap-5 pt-4'>
 							<PortfolioBlockTag>Next.js</PortfolioBlockTag>
 							<PortfolioBlockTag>Motion</PortfolioBlockTag>
 							<PortfolioBlockTag>Tailwindcss</PortfolioBlockTag>

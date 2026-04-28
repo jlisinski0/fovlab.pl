@@ -27,16 +27,31 @@ export type uslugiCheckItem = {
 }
 
 export type portfolioItem = {
-	id: number,
-	name: string,
+	id: number
+	name: string
 	category: string
 }
 
 export type portfolioBlockItem = {
-	id: number,
+	id: number
 	type: string
-	heading: string,
-	text: string,
+	heading: string
+	text: string
 	category: string
+	href?: string
+}
+
+export type kontaktBlockItems = {
+	id: number
+	img: StaticImageData | string
+	alt: string
+	type: string
+	text: string
+}
+
+
+export type footerItems = {
+	id: number,
+	text: string,
 	href?: string
 }
