@@ -10,7 +10,7 @@ export default function NavMobile({ state }: { state: (val: boolean) => void }) 
 			exit={{ opacity: 0, y: -20 }}
 			transition={{ duration: 0.2 }}
 			className='h-40 sticky top-18  w-full bg-pearl_perfect z-50 lg:hidden'>
-			<div className='flex items-start  h-full w-full z-10'>
+			<div className='flex items-start  h-full w-full z-10 border-b border-grey/50'>
 				<ul className='flex flex-col px-10 w-full pt text-sm'>
 					{navItems.map(item => (
 						<li className='cursor-pointer w-full h-full  hover:text-accentOne duration-300 transition-colors' key={item.id}>
