@@ -39,6 +39,7 @@ export type portfolioBlockItem = {
 	text: string
 	category: string
 	href?: string
+	img?: StaticImageData | string
 }
 
 export type kontaktBlockItems = {
@@ -49,9 +50,15 @@ export type kontaktBlockItems = {
 	text: string
 }
 
-
 export type footerItems = {
-	id: number,
-	text: string,
+	id: number
+	text: string
 	href?: string
+}
+
+export type politykaItem = {
+	id: number
+	heading: string
+	text: string
+	text2?: string
 }

@@ -11,7 +11,7 @@ export default function PortfolioContent() {
 	return (
 		<div>
 			<PortfolioButton active={active} setActive={setActive} />
-			<div className='flex flex-wrap gap-5 pt-10'>
+			<div className='flex justify-center  flex-wrap gap-5 pt-10'>
 				<PortfolioBlock active={active} />
 			</div>
 		</div>

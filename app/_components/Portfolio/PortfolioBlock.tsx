@@ -5,6 +5,7 @@ import PortfolioBlockTag from './PortfolioBlockTag'
 import { portfolioBlockItems } from '@/data'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Image from 'next/image'
 
 interface Props {
 	active: string
@@ -24,18 +25,19 @@ export default function PortfolioBlock({ active }: Props) {
 
 	return (
 		<>
-			{filtered.map(({ id, type, heading, text, href }) => (
+			{filtered.map(({ id, type, heading, text, href, img }) => (
 				<a
 					href={href}
 					target='_blank'
 					rel='noopener noreferrer'
-					className='flex flex-col w-full h-140 pb-5 lg:h-120 rounded-2xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 cursor-pointer'
+					className='flex flex-col w-130 h-140 pb-5 lg:h-120 rounded-2xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 cursor-pointer'
 					key={id}
 					data-aos='fade-right'
 					style={{ border: '1px solid rgba(251,249,228,0.08)' }}>
-					<div className='relative h-[65%] w-full bg-gradient-to-br from-[#1e6e2e] to-[#122C4F] group'>
-						<div className='absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300' />
-						<div className='w-full h-full opacity-0 hover:opacity-100 transition-opacity duration-300'>
+					<div className='relative h-[65%] w-full group overflow-hidden'>
+						<Image src={img ?? ''} alt={heading} fill className='object-cover object-top' />
+						<div className='absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 z-10' />
+						<div className='absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300 z-10'>
 							<div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
 								<p className='px-4 py-2 rounded-2xl bg-light_green text-midnight text-sm font-bold'>Zobacz projekt</p>
 							</div>

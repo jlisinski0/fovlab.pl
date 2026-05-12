@@ -22,8 +22,8 @@ const bad_script = Bad_Script({
 })
 
 export const metadata: Metadata = {
-	title: 'Fovlab.pl - Strony rozwijające twój biznes.',
-	description: `FovLab - tworzymy strony internetowe, sklepy online i chatboty AI. Pozycjonowanie SEO, które przynosi efekty. Sprawdź, jak możemy rozwinąć Twój biznes!`,
+	title: 'FovLab — Strony, Sklepy & Chatboty AI | Toruń i Polska',
+	description: `Buduję strony WWW, sklepy e-commerce i chatboty AI, które realnie zwiększają sprzedaż. Działam z Torunia, obsługuję firmy z całej Polski. Zapytaj o bezpłatną wycenę!`,
 
 	alternates: {
 		canonical: 'https://fovlab.pl',
@@ -36,15 +36,15 @@ export const metadata: Metadata = {
 
 	openGraph: {
 		type: 'website',
-		title: 'Fovlab.pl - Strony rozwijające twój biznes.',
-		description: `FovLab - tworzymy strony internetowe, sklepy online i chatboty AI. Pozycjonowanie SEO, które przynosi efekty. Sprawdź, jak możemy rozwinąć Twój biznes!`,
+		title: 'FovLab — Strony, Sklepy & Chatboty AI | Toruń i Polska',
+		description: `Buduję strony WWW, sklepy e-commerce i chatboty AI, które realnie zwiększają sprzedaż. Działam z Torunia, obsługuję firmy z całej Polski. Zapytaj o bezpłatną wycenę!`,
 		url: 'https://fovlab.pl',
 	},
 
 	twitter: {
 		card: 'summary_large_image',
-		title: 'Fovlab.pl - Strony rozwijające twój biznes.',
-		description: `FovLab - tworzymy strony internetowe, sklepy online i chatboty AI. Pozycjonowanie SEO, które przynosi efekty. Sprawdź, jak możemy rozwinąć Twój biznes!`,
+		title: 'FovLab — Strony, Sklepy & Chatboty AI | Toruń i Polska',
+		description: `Buduję strony WWW, sklepy e-commerce i chatboty AI, które realnie zwiększają sprzedaż. Działam z Torunia, obsługuję firmy z całej Polski. Zapytaj o bezpłatną wycenę!`,
 	},
 
 	icons: {

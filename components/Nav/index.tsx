@@ -4,16 +4,32 @@ import fov from '@/public/img/fov.png'
 import Image from 'next/image'
 import { navItems } from '@/data/index'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'motion/react'
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react'
 import { useState } from 'react'
 import NavMobile from './NavMobile'
 
 export default function Nav() {
+	const { scrollY } = useScroll()
+	const [scrollDirection, setScrollDirection] = useState('down')
+
 	const [isVisible, setIsVisible] = useState(false)
+	const [hidden, setHidden] = useState(false)
+
+	useMotionValueEvent(scrollY, 'change', current => {
+		const previous = scrollY.getPrevious() ?? 0
+		if (current > previous && current > 150) {
+			setHidden(true)
+		} else {
+			setHidden(false)
+		}
+	})
 
 	return (
 		<>
-			<nav className='bg-pearl_perfect w-full h-18 sticky top-0 border-b-grey border-b z-50'>
+			<motion.nav
+				className='bg-pearl_perfect w-full h-18 sticky top-0 border-b-grey border-b z-50'
+				animate={{ y: hidden ? -100 : 0 }} 
+				transition={{ duration: 0.4, ease: 'easeInOut' }}>
 				<div className='flex justify-between w-full h-full max-w-7xl mx-auto px-10'>
 					<a href='/#' className='flex items-center w-50'>
 						<Image src={fov} alt='Logo "fov"' width={70} height={70} style={{ height: 'auto' }} />
@@ -48,7 +64,7 @@ export default function Nav() {
 					</button>
 				</div>
 				<AnimatePresence>{isVisible && <NavMobile state={setIsVisible} />}</AnimatePresence>
-			</nav>
+			</motion.nav>
 		</>
 	)
 }

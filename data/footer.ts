@@ -9,14 +9,17 @@ export const footerItem: Record<string, footerItems[]> = {
 		{
 			id: 2,
 			text: 'Landing Page',
+			href: '/#uslugi',
 		},
 		{
 			id: 3,
 			text: 'Sklepy internetowy',
+			href: '/#uslugi',
 		},
 		{
 			id: 4,
 			text: 'Chatboty AI',
+			href: '/#uslugi',
 		},
 	],
 	firma: [
@@ -27,7 +30,7 @@ export const footerItem: Record<string, footerItems[]> = {
 		{
 			id: 2,
 			text: 'Portfolio',
-			href: '#portfolio',
+			href: '/#portfolio',
 		},
 		{
 			id: 3,
@@ -37,7 +40,7 @@ export const footerItem: Record<string, footerItems[]> = {
 		{
 			id: 4,
 			text: 'Kontakt',
-			href: '#kontakt',
+			href: '/#kontakt',
 		},
 	],
 	inne: [
@@ -48,6 +51,7 @@ export const footerItem: Record<string, footerItems[]> = {
 		{
 			id: 2,
 			text: 'Polityka prywatności',
+			href: '/polityka-prywatnosci',
 		},
 	],
 }

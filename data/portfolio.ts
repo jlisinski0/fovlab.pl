@@ -1,5 +1,7 @@
 import { portfolioItem } from '@/types'
 import { portfolioBlockItem } from '@/types'
+import fovPhoto from '@/public/img/fovlab.pl.png'
+import jlisinskiPhoto from '@/public/img/jlisinski.png'
 
 export const portfolioItems: portfolioItem[] = [
 	{
@@ -32,14 +34,17 @@ export const portfolioBlockItems: portfolioBlockItem[] = [
 		text: 'Landing page dla mojej firmy z branży witryn internetowych',
 		category: 'landing',
 		href: 'https://fovlab.pl',
+		img: fovPhoto.src,
 	},
 
 	{
 		id: 2,
-		type: 'Sklep internetowy',
-		heading: 'Lorem ipsum dolor sit.',
-		text: 'Lorem ipsum dolor sit.',
-		category: 'sklepy',
+		type: 'Landing Page',
+		heading: 'jlisinski.dev - portfolio',
+		text: 'Landing page, który pokazuje portfolio',
+		category: 'landing',
+		href: 'https://jlisinski.vercel.app/',
+		img: jlisinskiPhoto.src,
 	},
 
 	{
