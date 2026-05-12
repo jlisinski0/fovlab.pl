@@ -90,7 +90,7 @@ export default function KontaktRight() {
 	}
 
 	return (
-		<form ref={formRef} onSubmit={handleSubmit} className='flex flex-col justify-end gap-5' data-aos='fade-left'>
+		<form ref={formRef} onSubmit={handleSubmit} className='flex flex-col justify-end gap-5' data-aos='fade-up' data-aos-duration='500'>
 			<div className='flex flex-col lg:flex-row gap-5'>
 				<div className='flex flex-col lg:w-1/2'>
 					<label className='uppercase text-black/40 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='name'>

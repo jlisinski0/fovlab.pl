@@ -1,12 +1,13 @@
 'use client'
 
-import fov from '@/public/img/fov.png'
-import Image from 'next/image'
-import { navItems } from '@/data/index'
-import Link from 'next/link'
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react'
 import { useState } from 'react'
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react'
+import Image from 'next/image'
+import Link from 'next/link'
 import NavMobile from './NavMobile'
+import { navItems } from '@/data/index'
+import fov from '@/public/img/fov.png'
+import arrow from '@/public/icons/arrow-right.svg'
 
 export default function Nav() {
 	const { scrollY } = useScroll()
@@ -26,10 +27,7 @@ export default function Nav() {
 
 	return (
 		<>
-			<motion.nav
-				className='bg-pearl_perfect w-full h-18 sticky top-0 border-b-grey border-b z-50'
-				animate={{ y: hidden ? -100 : 0 }} 
-				transition={{ duration: 0.4, ease: 'easeInOut' }}>
+			<motion.nav className='bg-pearl_perfect w-full h-18 sticky top-0 border-b-grey border-b z-50' animate={{ y: hidden ? -100 : 0 }} transition={{ duration: 0.4, ease: 'easeInOut' }}>
 				<div className='flex justify-between w-full h-full max-w-7xl mx-auto px-10'>
 					<a href='/#' className='flex items-center w-50'>
 						<Image src={fov} alt='Logo "fov"' width={70} height={70} style={{ height: 'auto' }} />
@@ -48,11 +46,11 @@ export default function Nav() {
 					</ul>
 					<div className='hidden lg:flex items-center'>
 						<div className='flex gap-5'>
-							<a href='#kontakt' className='py-2 px-5 border  border-light_grey rounded-2xl hover:border-black/70 hover:bg-grey duration-300 transition-border   cursor-pointer'>
-								Kontakt
-							</a>
-							<a href='#kontakt' className='flex flex-row py-2 px-5 bg-midnight  text-white rounded-2xl  hover:-translate-y-1 transition-transform duration-300 cursor-pointer'>
+							<a
+								href='#kontakt'
+								className='flex flex-row py-2 px-12 gradient text-sm text-white rounded-4xl font-medium shadow-midnight shadow-sm  hover:-translate-y-1 transition-transform duration-300 cursor-pointer'>
 								Zamów
+								<Image src={arrow} alt='strzałka pokazująca w prawo' width={17} className='ml-1' />
 							</a>
 						</div>
 					</div>

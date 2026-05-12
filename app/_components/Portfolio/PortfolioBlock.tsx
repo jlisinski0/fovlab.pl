@@ -32,7 +32,8 @@ export default function PortfolioBlock({ active }: Props) {
 					rel='noopener noreferrer'
 					className='flex flex-col w-130 h-140 pb-5 lg:h-120 rounded-2xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 cursor-pointer'
 					key={id}
-					data-aos='fade-right'
+					data-aos='fade-up'
+					data-aos-duration='500'
 					style={{ border: '1px solid rgba(251,249,228,0.08)' }}>
 					<div className='relative h-[65%] w-full group overflow-hidden'>
 						<Image src={img ?? ''} alt={heading} fill className='object-cover object-top' />

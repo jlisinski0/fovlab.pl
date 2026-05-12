@@ -19,7 +19,7 @@ export default function UslugiContent() {
 	}, [])
 	return (
 		<div className='flex flex-col pt-10'>
-			<div className='flex flex-col lg:flex-row gap-1' data-aos='fade-up'>
+			<div className='flex flex-col lg:flex-row gap-1' data-aos='fade-up' data-aos-duration='500'>
 				{uslugiItems.map((item, index) => (
 					<UslugiBlock key={item.id} item={item} side={index % 2 === 0 ? 'left' : 'right'} />
 				))}

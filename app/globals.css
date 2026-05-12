@@ -4,6 +4,10 @@
 	scroll-behavior: smooth;
 }
 
+.aos-wrapper {
+	overflow: hidden; /* clipuje elementy wychodzące poza */
+}
+
 @theme {
 	--color-midnight: #122c4f;
 	--color-pearl_perfect: #fbf9e4;
@@ -46,4 +50,23 @@
 			transform: translateY(0);
 		}
 	}
+}
+
+.gradient {
+	background-image: linear-gradient(
+		90deg,
+		hsl(214deg 63% 19%) 0%,
+		hsl(215deg 65% 20%) 8%,
+		hsl(215deg 67% 20%) 17%,
+		hsl(215deg 68% 21%) 25%,
+		hsl(215deg 70% 21%) 33%,
+		hsl(215deg 71% 22%) 42%,
+		hsl(215deg 72% 22%) 50%,
+		hsl(215deg 74% 23%) 58%,
+		hsl(215deg 75% 23%) 67%,
+		hsl(215deg 76% 24%) 75%,
+		hsl(215deg 77% 24%) 83%,
+		hsl(215deg 78% 25%) 92%,
+		hsl(214deg 80% 25%) 100%
+	);
 }

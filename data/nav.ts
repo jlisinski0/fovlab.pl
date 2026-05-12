@@ -18,6 +18,11 @@ export const navItems: navItem[] = [
 	},
 	{
 		id: 4,
+		name: 'Kontakt',
+		href: '/#kontakt',
+	},
+	{
+		id: 5,
 		name: 'Blog',
 		href: '/blog',
 	},

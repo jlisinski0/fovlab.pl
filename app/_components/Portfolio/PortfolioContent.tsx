@@ -1,16 +1,25 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import PortfolioButton from './PortfolioButton'
 import PortfolioBlock from './PortfolioBlock'
-import { portfolioItems } from '@/data'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default function PortfolioContent() {
 	const [active, setActive] = useState('all')
 
+	useEffect(() => {
+		AOS.init({
+			duration: 800,
+			once: true,
+		})
+	}, [])
 	return (
 		<div>
-			<PortfolioButton active={active} setActive={setActive} />
+			<div data-aos='fade-up' data-aos-duration='700'>
+				<PortfolioButton active={active} setActive={setActive} />
+			</div>
 			<div className='flex justify-center  flex-wrap gap-5 pt-10'>
 				<PortfolioBlock active={active} />
 			</div>
