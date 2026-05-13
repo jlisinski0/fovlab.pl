@@ -14,19 +14,25 @@ import KontaktSuccess from './KontaktSuccess'
 
 type FormErrors = ZodFormattedError<ContactFormData>
 
-const emptyData: ContactFormData = {
+const emptyData = {
 	name: '',
 	email: '',
 	message: '',
 	money: '' as ContactFormData['money'],
-	service: undefined,
+	service: '' as string,
 }
 
 export default function KontaktRight() {
 	const formRef = useRef<HTMLFormElement>(null)
 
 	const [errors, setErrors] = useState<FormErrors | null>(null)
-	const [formData, setFormData] = useState<ContactFormData>(emptyData)
+	const [formData, setFormData] = useState<{
+		name: string
+		email: string
+		message: string
+		money: string
+		service: string
+	}>(emptyData)
 	const [isSuccess, setIsSuccess] = useState(false)
 	const [isSending, setIsSending] = useState(false)
 
