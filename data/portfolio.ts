@@ -46,12 +46,4 @@ export const portfolioBlockItems: portfolioBlockItem[] = [
 		href: 'https://jlisinski.vercel.app/',
 		img: jlisinskiPhoto.src,
 	},
-
-	{
-		id: 3,
-		type: 'Chatboty AI',
-		heading: 'Lorem ipsum dolor sit.',
-		text: 'Lorem ipsum dolor sit.',
-		category: 'chatbot',
-	},
 ]

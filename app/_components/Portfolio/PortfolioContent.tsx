@@ -17,7 +17,7 @@ export default function PortfolioContent() {
 	}, [])
 	return (
 		<div>
-			<div data-aos='fade-up' data-aos-duration='700'>
+			<div data-aos='fade-up' data-aos-duration='700' className='flex flex-wrap justify-center'>
 				<PortfolioButton active={active} setActive={setActive} />
 			</div>
 			<div className='flex justify-center  flex-wrap gap-5 pt-10'>
