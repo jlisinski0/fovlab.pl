@@ -3,7 +3,7 @@ import HeaderRight from './HeaderRight'
 
 export default function Header() {
 	return (
-		<header className='h-auto  bg-midnight py-20 '>
+		<header className='h-auto bg-midnight py-20 '>
 			<div className='flex justify-between h-full w-full max-w-7xl mx-auto px-10 '>
 				<HeaderLeft />
 				<HeaderRight />

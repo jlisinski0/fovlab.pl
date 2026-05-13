@@ -7,11 +7,12 @@ export const contactSchema = z.object({
 	money: z.enum(['lower-3000', '3000', 'max-8000', 'max-20000', 'higher-20000'], {
 		message: 'Wybierz przedział',
 	}),
-	service: z
-		.enum(['landing-page', 'sklep', 'chatbot-ai', 'pakiet', 'inne'], {
+	service: z.preprocess(
+		val => (val === '' || val === undefined ? undefined : val),
+		z.enum(['landing-page', 'sklep', 'chatbot-ai', 'pakiet', 'inne'], {
 			message: 'Wybierz usługę',
-		})
-		.optional(),
+		}),
+	),
 })
 
 export type ContactFormData = z.infer<typeof contactSchema>
