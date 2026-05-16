@@ -9,6 +9,12 @@ export type navItem = {
 	id: number
 	name: string
 	href: string
+	icon?: StaticImageData | string
+	menu?: {
+		id: number
+		name: string
+		href: string
+	}[]
 }
 
 export type uslugiItem = {

@@ -1,10 +1,17 @@
 import { navItem } from '@/types'
+import chevronDown from '@/public/icons/chevron-down.svg'
 
 export const navItems: navItem[] = [
 	{
 		id: 1,
 		name: 'Usługi',
-		href: '/#uslugi',
+		href: '#',
+		icon: chevronDown,
+		menu: [
+			{ id: 1, name: 'Strony internetowe', href: '/strony-internetowe' },
+			{ id: 2, name: 'Sklepy internetowe', href: '/sklepy-internetowe' },
+			{ id: 3, name: 'Chatboty', href: '/chatboty' },
+		],
 	},
 	{
 		id: 2,

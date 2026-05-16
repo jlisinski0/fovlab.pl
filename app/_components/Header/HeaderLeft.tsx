@@ -44,15 +44,15 @@ export default function HeaderLeft() {
 			<div className='my-8 w-[70%] lg:w-full bg-whiteTwo h-0.5'></div>
 			<div className='flex flex-wrap gap-10'>
 				<div data-aos='fade-up' data-aos-duration='1000'>
-					<p className='text-5xl text-white font-bold font-playfair_display'>5+</p>
-					<p className='text-sm pt-2 text-grey/50'>Projektów</p>
+					<p className='text-5xl text-white font-bold font-playfair_display'>1000+</p>
+					<p className='text-sm pt-2 text-grey/50'>Przepracowanych godzin</p>
 				</div>
 				<div data-aos='fade-up' data-aos-duration='1150'>
-					<p className='text-5xl text-white font-bold font-playfair_display'>3 lata</p>
+					<p className='text-5xl text-white font-bold font-playfair_display'>4 lata</p>
 					<p className='text-sm pt-2 text-grey/50'>Doświadczenia</p>
 				</div>
 				<div data-aos='fade-up' data-aos-duration='1300'>
-					<p className='text-5xl text-white font-bold font-playfair_display'>98%</p>
+					<p className='text-5xl text-white font-bold font-playfair_display'>99%</p>
 					<p className='text-sm pt-2 text-grey/50'>Zadowolonych klientów</p>
 				</div>
 			</div>

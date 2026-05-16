@@ -8,18 +8,18 @@ export const footerItem: Record<string, footerItems[]> = {
 		},
 		{
 			id: 2,
-			text: 'Landing Page',
-			href: '/#uslugi',
+			text: 'Strony internetowe',
+			href: '/strony-internetowe',
 		},
 		{
 			id: 3,
-			text: 'Sklepy internetowy',
-			href: '/#uslugi',
+			text: 'Sklepy internetowe',
+			href: '/strony-internetowe',
 		},
 		{
 			id: 4,
 			text: 'Chatboty AI',
-			href: '/#uslugi',
+			href: '/chatboty',
 		},
 	],
 	firma: [
