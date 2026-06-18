@@ -1,5 +1,5 @@
 'use client'
-import HeaderVisualCard from './HeaderVisualCard'
+import HeaderVisualCard from '../../../components/ui/HeaderVisualCard'
 import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'

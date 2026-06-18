@@ -42,7 +42,7 @@ export default function HeaderLeft() {
 				</a>
 			</div>
 			<div className='my-8 w-[70%] lg:w-full bg-whiteTwo h-0.5'></div>
-			<div className='flex flex-wrap gap-10'>
+			<div className='flex flex-wrap gap-10 '>
 				<div data-aos='fade-up' data-aos-duration='1000'>
 					<p className='text-5xl text-white font-bold font-playfair_display'>1000+</p>
 					<p className='text-sm pt-2 text-grey/50'>Przepracowanych godzin</p>

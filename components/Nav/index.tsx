@@ -8,6 +8,7 @@ import NavMobile from './NavMobile'
 import { navItems, portfolioItems } from '@/data/index'
 import fov from '@/public/img/fov.png'
 import arrow from '@/public/icons/arrow-right.svg'
+import { Autour_One } from 'next/font/google'
 
 export default function Nav() {
 	const { scrollY } = useScroll()
@@ -70,7 +71,7 @@ export default function Nav() {
 								href='#kontakt'
 								className='flex flex-row py-2 px-12 gradient text-sm text-white rounded-4xl font-medium shadow-midnight shadow-sm  hover:-translate-y-1 transition-transform duration-300 cursor-pointer'>
 								Zamów
-								<Image src={arrow} alt='strzałka pokazująca w prawo' width={17} className='ml-1' />
+								<Image src={arrow} alt='strzałka pokazująca w prawo' width={17} height={17} className='ml-1' style={{ height: 'auto' }} />
 							</a>
 						</div>
 					</div>
@@ -86,7 +87,7 @@ export default function Nav() {
 				</div>
 				{navItems.map(({ id, menu }) =>
 					menu && openMenu === id ? (
-						<AnimatePresence>
+						<AnimatePresence key={id}>
 							<motion.div
 								initial={{ clipPath: 'inset(0 0 100% 0)' }}
 								animate={{ clipPath: 'inset(0 0 0% 0)' }}
@@ -98,7 +99,7 @@ export default function Nav() {
 								onMouseLeave={() => setOpenMenu(null)}>
 								<ul className='flex flex-col gap-5 max-w-6xl mx-auto py-5'>
 									{menu.map(({ id, name, href }) => (
-										<li className='text-black/80 text-2xl group ' key={`${id++}`}>
+										<li className='text-black/80 text-2xl group ' key={id}>
 											<Link className='block group-hover:text-black cursor-pointer w-full p-2 group-hover:bg-black/5  duration-300 transition-colors' href={href}>
 												{name}
 											</Link>

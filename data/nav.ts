@@ -7,10 +7,11 @@ export const navItems: navItem[] = [
 		name: 'Usługi',
 		href: '#',
 		icon: chevronDown,
+
 		menu: [
-			{ id: 1, name: 'Strony internetowe', href: '/strony-internetowe' },
-			{ id: 2, name: 'Sklepy internetowe', href: '/sklepy-internetowe' },
-			{ id: 3, name: 'Chatboty', href: '/chatboty' },
+			{ id: 1, name: 'Strony internetowe', href: '/uslugi/strony-internetowe' },
+			{ id: 2, name: 'Sklepy internetowe', href: '/uslugi/sklepy-internetowe' },
+			{ id: 3, name: 'Chatboty', href: '/uslugi/chatboty-ai' },
 		],
 	},
 	{

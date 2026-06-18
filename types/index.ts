@@ -5,6 +5,21 @@ export type tickerItem = {
 	name: string
 }
 
+export type UslugiHeaderItem = {
+	id: number
+	slug: string
+	label: string
+	headingBefore: string
+	headingHighlight: string
+	headingAfter: string
+	paragraph: string
+	offer: {
+		id: number
+		number: string
+		text: string
+	}[]
+}
+
 export type navItem = {
 	id: number
 	name: string
@@ -67,4 +82,11 @@ export type politykaItem = {
 	heading: string
 	text: string
 	text2?: string
+}
+
+export type slugItem = {
+	id: number
+	slug: string
+	title: string
+	description: string
 }

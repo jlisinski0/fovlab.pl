@@ -29,11 +29,6 @@ export const metadata: Metadata = {
 		canonical: 'https://fovlab.pl',
 	},
 
-	robots: {
-		index: true,
-		follow: true,
-	},
-
 	openGraph: {
 		type: 'website',
 		title: 'FovLab — Strony, Sklepy & Chatboty AI | Toruń i Polska',
@@ -47,6 +42,10 @@ export const metadata: Metadata = {
 		description: `Buduję strony WWW, sklepy e-commerce i chatboty AI, które realnie zwiększają sprzedaż. Działam z Torunia, obsługuję firmy z całej Polski. Zapytaj o bezpłatną wycenę!`,
 	},
 
+	robots: {
+		index: true,
+		follow: true,
+	},
 	icons: {
 		icon: [
 			{ url: '/favicon.ico', sizes: 'any' },

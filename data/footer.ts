@@ -9,17 +9,17 @@ export const footerItem: Record<string, footerItems[]> = {
 		{
 			id: 2,
 			text: 'Strony internetowe',
-			href: '/strony-internetowe',
+			href: '/uslugi/strony-internetowe',
 		},
 		{
 			id: 3,
 			text: 'Sklepy internetowe',
-			href: '/strony-internetowe',
+			href: '/uslugi/strony-internetowe',
 		},
 		{
 			id: 4,
 			text: 'Chatboty AI',
-			href: '/chatboty',
+			href: '/uslugi/chatboty-ai',
 		},
 	],
 	firma: [
