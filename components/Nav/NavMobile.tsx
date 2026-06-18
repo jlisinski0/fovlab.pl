@@ -66,7 +66,7 @@ export default function NavMobile({ state }: { state: (val: boolean) => void }) 
 					))}
 				</ul>
 
-				<div className='flex gap-2'>
+				<div className='flex flex-wrap gap-2'>
 					<a
 						onClick={() => state(false)}
 						href='#kontakt'

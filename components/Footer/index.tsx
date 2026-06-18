@@ -3,8 +3,8 @@ import FooterRight from './FooterRight'
 
 export default function Footer() {
 	return (
-		<footer className='h-auto bg-[#080f1a] '>
-			<div className='flex flex-col h-full w-full max-w-7xl mx-auto px-10 py-20 '>
+		<footer className='min-h-[50vh] bg-[#080f1a] '>
+			<div className='flex flex-col  h-full w-full max-w-7xl mx-auto px-10 py-20 '>
 				<div className='flex flex-col lg:flex-row'>
 					<FooterLeft />
 					<FooterRight />
