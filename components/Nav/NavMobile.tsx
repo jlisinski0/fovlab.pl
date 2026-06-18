@@ -72,7 +72,7 @@ export default function NavMobile({ state }: { state: (val: boolean) => void }) 
 						href='#kontakt'
 						className='flex flex-row py-2 px-5 mt-5 gradient text-[13px] text-white rounded-4xl font-medium shadow-midnight shadow-sm  hover:-translate-y-1 transition-transform duration-300 cursor-pointer '>
 						Zamów
-						<Image src={arrow} alt='strzałka pokazująca w prawo' width={15} className='ml-1' />
+						<Image src={arrow} alt='strzałka pokazująca w prawo' width={15} height={15} className='ml-1' />
 					</a>
 
 					<a

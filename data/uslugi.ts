@@ -1,5 +1,8 @@
 import monitor from '@/public/icons/monitor.svg'
 import shoppingbag from '@/public/icons/shopping-bag.svg'
+import ai from '@/public/img/ai.svg'
+import shopping from '@/public/img/shopping.svg'
+import site from '@/public/img/site.svg'
 import { uslugiItem } from '@/types'
 import { uslugiCheckItem } from '@/types'
 import { slugItem } from '@/types'
@@ -76,9 +79,14 @@ export const UslugiHeaderItems: UslugiHeaderItem[] = [
 		slug: 'strony-internetowe',
 		label: 'Strony internetowe',
 		headingBefore: 'Strona, która',
-		headingHighlight: 'sprzedaje ',
+		headingHighlight: 'sprzedaje —',
 		headingAfter: 'nie tylko wygląda',
-		paragraph: 'Projektuję strony internetowe dopasowane do Twojego biznesu — szybkie, responsywne i zoptymalizowane pod konwersję od pierwszego dnia. Dla firm z Torunia i całej Polski.',
+		paragraph:
+			'Tworzę nowoczesne witryny, które nie tylko zachwycają designem, ale przede wszystkim sprzedają. Wykorzystuję najnowsze technologie, by Twoja firma wyraźnie wyróżniała się na tle konkurencji.',
+		button1: 'Zobacz realizacje',
+		button2: 'Bezpłatna konsultacja',
+		photo: site,
+		alt: 'Mężczyzna oraz kobieta trzymają torby z zakupami',
 		offer: [
 			{ id: 1, number: '1000+', text: 'Przepracowanych godzin' },
 			{ id: 2, number: '4 lata', text: 'Doświadczenia' },
@@ -90,12 +98,15 @@ export const UslugiHeaderItems: UslugiHeaderItem[] = [
 		id: 2,
 		slug: 'sklepy-internetowe',
 		label: 'Sklepy internetowe',
-		headingBefore: 'Sklep, który',
-		headingHighlight: 'zarabia ',
-		headingAfter: 'nie tylko wygląda',
+		headingBefore: 'E-commerce, ',
+		headingHighlight: 'który realnie',
+		headingAfter: 'zawiększa sprzedaż',
+		button1: 'Rozpocznij sprzedaż',
+		button2: 'Bezpłatna konsultacja',
 		paragraph:
-			'Projektuję nowoczesne sklepy e-commerce dopasowane do Twojego asortymentu — szybkie, bezpieczne i zoptymalizowane pod maksymalny zysk od pierwszego dnia. Dla firm z Torunia i całej Polski.',
-
+			'Tworzę nowoczesne sklepy e-commerce, które nie tylko świetnie wyglądają, ale przede wszystkim maksymalizują Twój zysk. Wykorzystuję szybkie i bezpieczne technologie, by Twoja marka wyraźnie dominowała na rynku w Toruniu i całej Polsce.',
+		photo: shopping,
+		alt: 'Mężczyzna wskazujący na strone w przeglądarce',
 		offer: [
 			{ id: 1, number: 'Bez limitu', text: 'Produktów i kategorii' },
 			{ id: 2, number: '4 lata', text: 'Doświadczenia w e-commerce' },
@@ -108,15 +119,16 @@ export const UslugiHeaderItems: UslugiHeaderItem[] = [
 		slug: 'chatboty-ai',
 		label: 'Chatboty AI',
 		headingBefore: 'Bot, który',
-		headingHighlight: 'automatyzuje ',
+		headingHighlight: 'automatyzuje —',
 		headingAfter: 'i sprzedaje 24/7',
-		paragraph:
-			'Wdrażam inteligentne chatboty AI dopasowane do Twojego biznesu — natychmiastowe w reakcji, uczące się na Twoich danych i odciążające Twój zespół od pierwszego dnia. Dla firm z Torunia i całej Polski.',
-
+		paragraph: 'Zyskaj setki godzin miesięcznie. Wdróż inteligentnego asystenta, który obsługuje zapytania, rozwiązuje problemy i sprzedaje — 24/7, bez przerw i pomyłek',
+		button1: 'Wdróż AI w swojej firmie',
+		button2: 'Bezpłatna konsultacja',
+		photo: ai,
+		alt: 'Zdjęcie robotycznej głowy',
 		offer: [
-			{ id: 1, number: '24/7', text: 'Automatyczna obsługa klienta' },
-			{ id: 2, number: '2 lata', text: 'Doświadczenia w automatyzacjach' },
-			{ id: 3, number: 'do 80%', text: 'Mniej powtarzalnych pytań (FAQ)' },
+			{ id: 1, number: '24/7', text: 'Gotowość do pracy' },
+			{ id: 2, number: '100%', text: 'Precyzyjnych odpowiedzi' },
 			{ id: 4, number: '0 sek', text: 'Czasu reakcji na zapytanie' },
 		],
 	},

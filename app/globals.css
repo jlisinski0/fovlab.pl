@@ -8,19 +8,20 @@
 }
 
 @theme {
-	--color-midnight: #122c4f;
+	--color-midnight: #131b2e;
+	--color-midnightTwo: #0f172a;
 	--color-pearl_perfect: #fbf9e4;
 	--color-black: #000000;
-	--color-white: #f5f4f4;
+	--color-white: #d8e3fb;
 	--color-green: #1e6e2e;
-	--color-light_green: #7eda8a;
+	--color-light_green: #22c55e;
 	--color-grey: #eeecec;
-
+	--color-blackRed: #27141a;
 	--color-whiteTwo: rgba(251, 249, 228, 0.06);
 	--color-black_green: rgba(123, 218, 138, 0.12);
-
 	--color-border_green: rgba(123, 218, 138, 0.3);
 	--color-light_grey: rgba(18, 44, 79, 0.05);
+	
 	--font-bad_script: var(--font-bad_script-mono);
 	--font-playfair_display: var(--font-playfair_display-sans);
 	--animate-tickerscroll: tickerScroll 30s linear infinite;

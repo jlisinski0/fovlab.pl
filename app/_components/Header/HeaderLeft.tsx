@@ -18,15 +18,13 @@ export default function HeaderLeft() {
 				<p className='text-[12px] text-light_green uppercase tracking-[.12em]'>Profesjonalne realizacje</p>
 			</div>
 			<div className='pt-5 text-left'>
-				<h1 className='text-4xl md:text-5xl lg:text-[74px] text-pearl_perfect font-playfair_display'>
-					Strony, które{' '}
-					<span className='block text-light_green'>
-						sprzedają <span className='text-pearl_perfect'> —</span>{' '}
-					</span>{' '}
-					nie tylko wyglądają
+				<h1 className='lg:leading-[1.1] text-4xl md:text-5xl lg:text-[74px] text-white font-playfair_display'>
+					Tworzę <br />
+					rozwiązania, które <span className='italic block text-light_green'>napędzają</span>
+					Twój cyfrowy zysk.
 				</h1>
-				<p className='text-sm md:text-base lg:text-xl text-pearl_perfect/80 pt-7' data-aos='fade-up' data-aos-duration='700'>
-					Tworzymy cyfrowe narzędzia dopasowane do Twojego biznesu — od landing page po zaawansowane sklepy i asystentów AI, które pracują 24/7.{' '}
+				<p className='text-sm md:text-base lg:text-[18px] text-white pt-7' data-aos='fade-up' data-aos-duration='700'>
+					Projektuję cyfrowe narzędzia dopasowane do Twojego biznesu — od landing page po zaawansowane sklepy i asystentów AI, które pracują 24/7.{' '}
 				</p>
 			</div>
 			<div className='flex flex-wrap gap-2 pt-10' data-aos='fade-up' data-aos-duration='900'>
@@ -37,22 +35,22 @@ export default function HeaderLeft() {
 				</a>
 				<a
 					href='#kontakt'
-					className='px-6 py-3 text-center bg-midnight text-light_green border-light_green border text-[12px] md:text-sm lg:text-base font-medium rounded-2xl cursor-pointer hover:bg-light_green hover:text-midnight duration-300 transition-colors'>
+					className='px-6 py-3 text-center bg-midnightTwo text-light_green border-light_green border text-[12px] md:text-sm lg:text-base font-medium rounded-2xl cursor-pointer hover:bg-light_green hover:text-midnight duration-300 transition-colors'>
 					Bezpłatna konsultacja
 				</a>
 			</div>
 			<div className='my-8 w-[70%] lg:w-full bg-whiteTwo h-0.5'></div>
-			<div className='flex flex-wrap gap-10 '>
+			<div className='flex flex-wrap justify-center gap-10 '>
 				<div data-aos='fade-up' data-aos-duration='1000'>
-					<p className='text-5xl text-white font-bold font-playfair_display'>1000+</p>
+					<p className='text-4xl lg:text-5xl text-white font-bold font-playfair_display'>1000+</p>
 					<p className='text-sm pt-2 text-grey/50'>Przepracowanych godzin</p>
 				</div>
 				<div data-aos='fade-up' data-aos-duration='1150'>
-					<p className='text-5xl text-white font-bold font-playfair_display'>4 lata</p>
+					<p className='text-4xl lg:text-5xl text-white font-bold font-playfair_display'>4 lata</p>
 					<p className='text-sm pt-2 text-grey/50'>Doświadczenia</p>
 				</div>
 				<div data-aos='fade-up' data-aos-duration='1300'>
-					<p className='text-5xl text-white font-bold font-playfair_display'>99%</p>
+					<p className='text-4xl lg:text-5xl text-white font-bold font-playfair_display'>99%</p>
 					<p className='text-sm pt-2 text-grey/50'>Zadowolonych klientów</p>
 				</div>
 			</div>

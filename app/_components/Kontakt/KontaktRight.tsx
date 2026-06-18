@@ -99,7 +99,7 @@ export default function KontaktRight() {
 		<form ref={formRef} onSubmit={handleSubmit} className='flex flex-col justify-end gap-5' data-aos='fade-up' data-aos-duration='500'>
 			<div className='flex flex-col lg:flex-row gap-5'>
 				<div className='flex flex-col lg:w-1/2'>
-					<label className='uppercase text-black/40 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='name'>
+					<label className='uppercase text-white/80 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='name'>
 						Imię i nazwisko
 					</label>
 					<input
@@ -115,7 +115,7 @@ export default function KontaktRight() {
 					{errors?.name?._errors[0] && <p className='pt-1 text-red-500 text-sm'>{errors.name._errors[0]}</p>}
 				</div>
 				<div className='flex flex-col lg:w-1/2'>
-					<label className='uppercase text-black/40 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='email'>
+					<label className='uppercase text-white/80 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='email'>
 						Email
 					</label>
 					<input
@@ -133,7 +133,7 @@ export default function KontaktRight() {
 			</div>
 
 			<div className='flex flex-col'>
-				<label className='uppercase text-black/40 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='service'>
+				<label className='uppercase text-white/80 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='service'>
 					Czego potrzebujesz?
 				</label>
 				<select
@@ -158,7 +158,7 @@ export default function KontaktRight() {
 			</div>
 
 			<div className='flex flex-col'>
-				<label className='uppercase text-black/40 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='money'>
+				<label className='uppercase text-white/80 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='money'>
 					Budżet orientacyjny
 				</label>
 				<select
@@ -183,7 +183,7 @@ export default function KontaktRight() {
 			</div>
 
 			<div className='flex flex-col'>
-				<label className='uppercase text-black/40 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='message'>
+				<label className='uppercase text-white/80 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='message'>
 					Opowiedz o projekcie
 				</label>
 				<textarea

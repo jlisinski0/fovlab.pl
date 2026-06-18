@@ -1,10 +1,13 @@
-import HeaderVisualCard from '@/components/ui/HeaderVisualCard'
+import { UslugiHeaderItem } from '@/types'
+import Image from 'next/image'
 
-
-export default function UslugiHeaderRight() {
+export default function UslugiHeaderRight({ photo, alt }: UslugiHeaderItem) {
+	if (!photo || !alt) return null
 	return (
-		<div className='w-full h-full hidden lg:flex items-start justify-end pt-20 animate-moveUp ' data-aos='fade-up'>
-			<HeaderVisualCard />
+		<div className='w-full h-120 hidden lg:flex items-center justify-center pt-10 '>
+			<div className='animate-moveUp ' data-aos='fade-up'>
+				<Image src={photo} alt={alt} width={300} height={300} />
+			</div>
 		</div>
 	)
 }

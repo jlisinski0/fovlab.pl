@@ -13,6 +13,10 @@ export type UslugiHeaderItem = {
 	headingHighlight: string
 	headingAfter: string
 	paragraph: string
+	button1: string
+	button2: string
+	photo?: StaticImageData | string
+	alt?: string
 	offer: {
 		id: number
 		number: string
@@ -89,4 +93,11 @@ export type slugItem = {
 	slug: string
 	title: string
 	description: string
+}
+
+export type whyUsItem = {
+	id: number
+	heading: string
+	btnText: string
+	features: string[]
 }
