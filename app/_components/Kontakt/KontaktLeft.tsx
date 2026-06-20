@@ -18,7 +18,7 @@ export default function KontaktLeft() {
 				Kontakt
 			</div>
 			<div className='flex flex-col gap-5 '>
-				<h2 className='text-white text-4xl lg:text-6xl font-playfair_display font-bold'>
+				<h2 className='text-white text-4xl lg:text-6xl font-playfair_display font-bold lg:leading-[1.1]'>
 					Zróbmy razem coś <span className='text-light_green'>wyjątkowego</span>
 				</h2>
 				<p className='font-bad_script text-white text-lg lg:text-2xl' data-aos='fade-up' aos-duration='700'>
@@ -28,7 +28,7 @@ export default function KontaktLeft() {
 					Wypełnij formularz, a odezwę się w ciągu 24 godzin. Pierwsza konsultacja jest zawsze bezpłatna — opowiem Ci, jak podejdę do Twojego projektu i ile może kosztować.
 				</p>
 			</div>
-			<div className='pt-10' data-aos='fade-up' data-aos-duration='1150'>
+			<div className='pt-10' data-aos='fade-up' data-aos-duration='950'>
 				<KontaktLeftBlock />
 			</div>
 		</div>

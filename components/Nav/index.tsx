@@ -28,11 +28,10 @@ export default function Nav() {
 
 	return (
 		<>
-			<motion.nav className='  bg-pearl_perfect w-full h-18 sticky top-0 border-b-grey border-b z-50' animate={{ y: hidden ? -100 : 0 }} transition={{ duration: 0.4, ease: 'easeInOut' }}>
+			<motion.nav className='  bg-pearl_perfect w-full h-18 sticky top-0  z-50' animate={{ y: hidden ? -100 : 0 }} transition={{ duration: 0.4, ease: 'easeInOut' }}>
 				<div className='flex relative justify-between w-full h-full max-w-7xl mx-auto px-10'>
 					<a href='/#' className='flex items-center w-50'>
 						<Image src={fov} alt='Logo "fov"' width={70} height={70} priority style={{ height: 'auto' }} />
-						<p className='font-playfair_display font-bold'>FovLab</p>
 					</a>
 					<ul className='hidden lg:flex absolute left-1/2 -translate-x-1/2  h-full justify-center items-center gap-12'>
 						{navItems.map(({ id, name, href, icon, menu }) => (

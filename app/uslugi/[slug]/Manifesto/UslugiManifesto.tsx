@@ -1,4 +1,6 @@
-export default function Manifesto() {
+import { UslugiManifestoItem } from "@/types"
+
+export default function UslugiManifesto(item: UslugiManifestoItem) {
 	return (
 		<section className='h-auto bg-midnightTwo py-15'>
 			<div className='flex flex-col h-full w-full max-w-7xl mx-auto px-10 pt-20 pb-5' data-aos='fade-up' data-aos-duration='500'>

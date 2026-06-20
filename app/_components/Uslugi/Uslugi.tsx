@@ -19,7 +19,7 @@ export default function Uslugi() {
 					Usługi
 				</div>
 				<div className='flex flex-col gap-5 md:flex-row md:justify-between'>
-					<h2 className='text-white text-4xl lg:text-6xl font-playfair_display font-bold'>
+					<h2 className='text-white text-4xl lg:text-6xl font-playfair_display font-bold lg:leading-[1.1]'>
 						Buduję narzędzia,{' '}
 						<span className='text-light_green block'>
 							<span className='text-white'>które</span> pracują

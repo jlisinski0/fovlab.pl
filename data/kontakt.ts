@@ -8,14 +8,14 @@ export const kontaktItems: kontaktBlockItems[] = [
 		id: 1,
 		img: mail,
 		alt: 'Ikona koperty',
-		type: 'Email',
+		type: 'Napisz',
 		text: 'kontakt@fovlab.pl',
 	},
 	{
 		id: 2,
 		img: phone,
 		alt: 'Ikona telefonu stacjonarnego',
-		type: 'Telefon',
+		type: 'Zadzwoń',
 		text: '+48 519 793 345',
 	},
 	{

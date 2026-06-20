@@ -19,7 +19,7 @@ export default function UslugiHeaderLeft({ id, label, headingAfter, headingBefor
 				<p className='text-[12px] text-light_green uppercase tracking-[.12em]'>{label}</p>
 			</div>
 			<div className='pt-5 text-left'>
-				<h1 className='text-4xl md:text-5xl lg:text-[74px] text-white font-playfair_display'>
+				<h1 className='text-4xl md:text-5xl lg:text-[74px] text-white font-playfair_display lg:leading-[1.1] '>
 					{headingBefore}{' '}
 					<span className='block text-light_green'>
 						{headingHighlight} <span className='text-pearl_perfect'></span>{' '}

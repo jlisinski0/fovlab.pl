@@ -3,10 +3,19 @@ import shoppingbag from '@/public/icons/shopping-bag.svg'
 import ai from '@/public/img/ai.svg'
 import shopping from '@/public/img/shopping.svg'
 import site from '@/public/img/site.svg'
+import google from '@/public/icons/chrome.svg'
+import zoom from '@/public/icons/zoom-in.svg'
+import stats from '@/public/icons/stats.svg'
+import apereture from '@/public/icons/aperture.svg'
+import money from '@/public/icons/dollar-sign.svg'
+import cart from '@/public/icons/shopping-cart.svg'
+
 import { uslugiItem } from '@/types'
 import { uslugiCheckItem } from '@/types'
 import { slugItem } from '@/types'
 import { UslugiHeaderItem } from '@/types'
+import { UslugiWhyUsItem } from '@/types'
+import { UslugiManifestoItem } from '@/types'
 
 export const uslugiItems: uslugiItem[] = [
 	{
@@ -131,5 +140,114 @@ export const UslugiHeaderItems: UslugiHeaderItem[] = [
 			{ id: 2, number: '100%', text: 'Precyzyjnych odpowiedzi' },
 			{ id: 4, number: '0 sek', text: 'Czasu reakcji na zapytanie' },
 		],
+	},
+]
+
+export const UslugiWhyUsItems: UslugiWhyUsItem[] = [
+	{
+		id: 1,
+		slug: 'strony-internetowe',
+		paragraph: 'Moje strony to nie tylko ładny design, to przemyślane narzędzia biznesowe.',
+		block: [
+			{
+				id: 1,
+				icon: stats,
+				alt: 'ikonka statystyk',
+				heading: 'Bezkompromisowa wydajność i prędkość (Performance)',
+				paragraph:
+					'Optymalizuję architekturę kodu oraz zasoby graficzne, dzięki czemu strona ładuje się w ułamku sekundy. Błyskawiczne działanie drastycznie obniża współczynnik odrzuceń, zatrzymuje użytkowników na dłużej i bezpośrednio przekłada się na wyższe pozycje w wyszukiwarce Google.',
+			},
+			{
+				id: 2,
+				icon: google,
+				alt: 'ikonka google chrome',
+				heading: 'Perfekcyjna responsywność (Responsive Web Design)',
+				paragraph:
+					'Strona idealnie dopasowuje się do każdego ekranu – od smartfonów o wysokiej gęstości pikseli, przez tablety, aż po wielkoformatowe monitory desktopowe. Zapewniam bezbłędne doświadczenie użytkownika (UX) bez względu na to, z jakiego urządzenia korzysta Twój klient..',
+			},
+			{
+				id: 3,
+				icon: zoom,
+				alt: 'ikonka lupy',
+				heading: 'Strategiczna optymalizacja SEO',
+				paragraph:
+					'Wdrażam semantyczną strukturę kodu HTML, optymalne nagłówki oraz zaawansowane metadane już na etapie programowania. Tworzę fundamenty w pełni przyjazne algorytmom wyszukiwarek, co otwiera drogę do skutecznego pozycjonowania i organicznego zdobywania klientów.',
+			},
+		],
+	},
+	{
+		id: 2,
+		slug: 'sklepy-internetowe',
+		paragraph: 'Moje strony to nie tylko ładny design, to przemyślane narzędzia biznesowe.',
+		block: [
+			{
+				id: 1,
+				icon: cart,
+				alt: 'ikona wózka na zakupy',
+				heading: 'Prosty proces zakupowy (UX)',
+				paragraph: 'Projektuję ścieżkę zakupową tak, aby klient przeszedł od wyboru produktu do płatności w kilku szybkich krokach. Mniej porzuconych koszyków to większy zysk dla Ciebie.',
+			},
+			{
+				id: 2,
+				icon: money,
+				alt: 'ikona dolara',
+				heading: 'Bezpieczeństwo i płatności',
+				paragraph: 'Integracja z najpopularniejszymi bramkami płatności (BLIK, PayU, Przelewy24) oraz certyfikaty SSL gwarantują pełne bezpieczeństwo i zaufanie Twoich klientów.',
+			},
+			{
+				id: 3,
+				icon: apereture,
+				alt: 'ikona kamery',
+				heading: 'Łatwe zarządzanie (CMS)',
+				paragraph: 'Intuicyjny panel administracyjny pozwoli Ci na błyskawiczne dodawanie produktów, zmianę cen i realizację zamówień bez znajomości kodu.',
+			},
+		],
+	},
+	{
+		id: 3,
+		slug: 'chatboty-ai',
+		paragraph: 'Moje strony to nie tylko ładny design, to przemyślane narzędzia biznesowe.',
+		block: [
+			{
+				id: 1,
+				icon: ai,
+				alt: 'test',
+				heading: 'Dostępność 24/7',
+				paragraph: 'Twoi klienci otrzymają natychmiastową pomoc o każdej porze dnia i nocy. Automatyczna obsługa najczęstszych pytań odciąży Twój zespół i skróci czas oczekiwania.',
+			},
+			{
+				id: 2,
+				icon: ai,
+				alt: 'test',
+				heading: 'Baza wiedzy o Twojej firmie',
+				paragraph:
+					'Bot jest w pełni spersonalizowany i wyszkolony na bazie danych Twojej firmy (pliki PDF, Twoja strona WWW czy regulaminy). Odpowiada precyzyjnie, używając wyłącznie sprawdzonych faktów o Twojej ofercie.',
+			},
+			{
+				id: 3,
+				icon: ai,
+				alt: 'test',
+				heading: 'Natychmiastowe odpowiedzi',
+				paragraph: 'Koniec z czekaniem na maila czy infolinię. Bot reaguje w ułamku sekundy, dzięki czemu nie tracisz niecierpliwych klientów i drastycznie zwiększasz szansę na domknięcie sprzedaży.',
+			},
+		],
+	},
+]
+
+export const UslugiManifestoItems: UslugiManifestoItem[] = [
+	{
+		id: 1,
+		text: 'test1',
+		slug: 'strony-internetowe',
+	},
+	{
+		id: 2,
+		text: 'test2',
+		slug: 'sklepy-interetowe',
+	},
+	{
+		id: 3,
+		text: 'test3',
+		slug: 'chatboty-ai',
 	},
 ]

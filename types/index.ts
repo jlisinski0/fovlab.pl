@@ -101,3 +101,21 @@ export type whyUsItem = {
 	btnText: string
 	features: string[]
 }
+
+export type UslugiWhyUsItem = {
+	id: number,
+	slug: string,
+	paragraph: string
+	block: {
+		id: number,
+		icon: StaticImageData | string,
+		alt: string,
+		heading: string,
+		paragraph: string
+	}[]
+}
+export type UslugiManifestoItem = {
+	id: number,
+	text: string,
+	slug: string
+}

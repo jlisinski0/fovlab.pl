@@ -103,7 +103,7 @@ export default function KontaktRight() {
 						Imię i nazwisko
 					</label>
 					<input
-						className='bg-white rounded-2xl border border-grey py-3.5 px-4.5'
+						className='bg-midnight text-white rounded-2xl border border-[#FBF9E414] py-3.5 px-4.5'
 						type='text'
 						placeholder='Jan Kowalski'
 						autoComplete='name'
@@ -119,7 +119,7 @@ export default function KontaktRight() {
 						Email
 					</label>
 					<input
-						className='bg-white rounded-2xl border border-grey py-3.5 px-4.5'
+						className='bg-midnight text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5'
 						type='email'
 						placeholder='przyklad@test.pl'
 						id='email'
@@ -137,7 +137,7 @@ export default function KontaktRight() {
 					Czego potrzebujesz?
 				</label>
 				<select
-					className='cursor-pointer bg-white rounded-2xl border border-grey py-3.5 px-4.5'
+					className='cursor-pointer bg-midnight text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5'
 					name='service'
 					id='service'
 					value={formData.service ?? ''}
@@ -162,7 +162,7 @@ export default function KontaktRight() {
 					Budżet orientacyjny
 				</label>
 				<select
-					className='cursor-pointer bg-white rounded-2xl border border-grey py-3.5 px-4.5'
+					className='cursor-pointerbg-midnight text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5'
 					name='money'
 					id='money'
 					value={formData.money}
@@ -187,7 +187,7 @@ export default function KontaktRight() {
 					Opowiedz o projekcie
 				</label>
 				<textarea
-					className='bg-white rounded-2xl border border-grey py-3.5 px-4.5 w-full'
+					className='bg-midnight text-white rounded-2xl border border-[#FBF9E414] py-3.5 px-4.5 w-full'
 					placeholder='Czym zajmuję się twoja firma? Co chcesz osiągnąć? Kiedy chciałbyś uruchomić projekt?'
 					id='message'
 					name='message'
@@ -198,7 +198,7 @@ export default function KontaktRight() {
 			</div>
 
 			<button
-				className='bg-midnight py-3.5 px-10 text-pearl_perfect cursor-pointer rounded-2xl font-medium hover:-translate-y-2 duration-300 transition-transform disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0'
+				className='bg-light_green py-3.5 px-10 text-midnight cursor-pointer rounded-2xl font-medium hover:-translate-y-2 duration-300 transition-transform disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0'
 				type='submit'
 				disabled={isSending}>
 				{isSending ? 'Wysyłanie...' : 'Wyślij zapytanie'}
