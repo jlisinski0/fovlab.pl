@@ -16,6 +16,7 @@ import { slugItem } from '@/types'
 import { UslugiHeaderItem } from '@/types'
 import { UslugiWhyUsItem } from '@/types'
 import { UslugiManifestoItem } from '@/types'
+import { ProsConsItem } from '@/types'
 
 export const uslugiItems: uslugiItem[] = [
 	{
@@ -237,17 +238,166 @@ export const UslugiWhyUsItems: UslugiWhyUsItem[] = [
 export const UslugiManifestoItems: UslugiManifestoItem[] = [
 	{
 		id: 1,
-		text: 'test1',
 		slug: 'strony-internetowe',
+		title: (
+			<>
+				Większość stron internetowych <br />
+				ma tylko <span className='text-light_green italic font-bold'>ładnie wyglądać</span>. <br />
+				Dlatego nie przynoszą żadnych <span className='text-light_green italic font-bold'>klientów</span>.
+			</>
+		),
+		description: (
+			<>
+				Nie wierzę w <strong>ciężkie, wolne witryny z generatorów</strong>, na których użytkownik gubi się po trzech sekundach. Tworzę <strong>ultraszybkie strony WWW</strong> zoptymalizowane pod
+				kątem SEO i UX, które{' '}
+				<span className='italic text-light_green'>
+					<strong>błyskawicznie zamieniają ruch w realne zapytania.</strong>
+				</span>
+				<br /> Projektuję architekturę informacji skrojoną wyłącznie pod Twoją grupę docelową, by każda wizyta zbliżała Cię do domknięcia sprzedaży.
+			</>
+		),
+	},
+	{
+		id: 1,
+		slug: 'strony-internetowe',
+		title: (
+			<>
+				Większość stron internetowych <br />
+				ma tylko <span className='text-light_green italic font-bold'>ładnie wyglądać</span>. <br />
+				Dlatego nie przynoszą żadnych <span className='text-light_green italic font-bold'>klientów</span>.
+			</>
+		),
+		description: (
+			<>
+				Nie wierzę w <strong>ciężkie, wolne witryny z generatorów</strong>, na których użytkownik gubi się po trzech sekundach. Tworzę <strong>ultraszybkie strony WWW</strong> zoptymalizowane pod
+				kątem SEO i UX, które{' '}
+				<span className=' italic text-light_green'>
+					<strong>błyskawicznie zamieniają ruch w realne zapytania.</strong>
+				</span>
+				Projektuję architekturę informacji skrojoną wyłącznie pod Twoją grupę docelową, by każda wizyta zbliżała Cię do domknięcia sprzedaży.
+			</>
+		),
 	},
 	{
 		id: 2,
-		text: 'test2',
-		slug: 'sklepy-interetowe',
+		slug: 'sklepy-internetowe',
+		title: (
+			<>
+				Większość sklepów internetowych <br />
+				kopiuje schematy <span className='text-light_green italic font-bold'>konkurencji</span>. <br />
+				Dlatego walczą wyłącznie <span className='text-light_green italic font-bold'>ceną</span>.
+			</>
+		),
+		description: (
+			<>
+				Nie wierzę w <strong>sztywne platformy e-commerce</strong>, które ograniczają skalowanie Twojego biznesu i frustrują kupujących. Projektuję <strong>inteligentne sklepy internetowe</strong> z
+				intuicyjną ścieżką zakupową, które{' '}
+				<span className='italic text-light_green'>
+					<strong>maksymalizują wartość każdego koszyka.</strong>
+				</span>
+				<br /> Tworzę systemy sprzedażowe skrojone pod Twoją logistykę i procesy, eliminując porzucone koszyki i napędzając stały wzrost przychodów.
+			</>
+		),
 	},
 	{
 		id: 3,
-		text: 'test3',
 		slug: 'chatboty-ai',
+		title: (
+			<>
+				Większość botów na stronach <br />
+				tylko irytuje <span className='text-light_green italic font-bold'>użytkowników</span>. <br />
+				Dlatego nikt nie chce z nimi <span className='text-light_green italic font-bold'>rozmawiać</span>.
+			</>
+		),
+		description: (
+			<>
+				Nie wierzę w <strong>sztywne, drzewiaste skrypty</strong>, które odpowiadają nie na temat i zniechęcają potencjalnych klientów. Wdrażam <strong>dedykowane chatboty AI</strong> oparte na
+				zaawansowanych modelach językowych, które{' '}
+				<span className='italic text-light_green'>
+					<strong>w ułamku sekundy rozwiązują problemy i sprzedają.</strong>
+				</span>
+				<br /> Projektuję wirtualnych asystentów skrojonych pod Twoją wiedzę firmową, gotowych do automatyzacji obsługi i generowania leadów przez 24/7.
+			</>
+		),
 	},
 ]
+
+export const UslugiProsConsItems = {
+	'strony-internetowe': [
+		{
+			id: 1,
+			heading: 'Masowe rozwiązania i ograniczone szablony.',
+			btnText: 'Stare podejscie',
+			features: [
+				'test.',
+				'Wolne ładowanie i słabe wyniki SEO przez przeładowany, przestarzały kod.',
+				'Sztywne, toporne automatyzacje i chatboty, które frustrują użytkowników.',
+				'Brak spójności - osobno postawiona strona, osobny sklep i niepołączone narzędzia.',
+			],
+		},
+
+		{
+			id: 2,
+			heading: 'Dedykowany ekosystem i technologia premium',
+			btnText: 'Moje podejscie',
+			features: [
+				'Ptest2i.',
+				'Ekstremalna szybkość Next.js / React i doskonałe oceny Core Web Vitals.',
+				'Inteligentni asystenci AI zintegrowani bezpośrednio z bazą wiedzy Twojej firmy.',
+				'Jedna, spójna i zautomatyzowana machina cyfrowa, która realnie konwertuje ruch w zysk.',
+			],
+		},
+	],
+
+	'sklepy-internetowe': [
+		{
+			id: 1,
+			heading: 'Masowe rozwiązania i ograniczone szablony.',
+			btnText: 'Stare podejscie',
+			features: [
+				'test.2',
+				'Wolne ładowanie i słabe wyniki SEO przez przeładowany, przestarzały kod.',
+				'Sztywne, toporne automatyzacje i chatboty, które frustrują użytkowników.',
+				'Brak spójności - osobno postawiona strona, osobny sklep i niepołączone narzędzia.',
+			],
+		},
+
+		{
+			id: 2,
+			heading: 'Dedykowany ekosystem i technologia premium',
+			btnText: 'Moje podejscie',
+			features: [
+				'Projektowanie UX/UI w 100% od zera, idealnie dopasowane do Twojej marki.',
+				'Ekstremalna szybkość Next.js / React i doskonałe oceny Core Web Vitals.',
+				'Inteligentni asystenci AI zintegrowani bezpośrednio z bazą wiedzy Twojej firmy.',
+				'Jedna, spójna i zautomatyzowana machina cyfrowa, która realnie konwertuje ruch w zysk.',
+			],
+		},
+	],
+
+	'chatboty-ai': [
+		{
+			id: 1,
+			heading: 'Masowe rozwiązania i ograniczone szablony.',
+			btnText: 'Stare podejscie',
+			features: [
+				'test.3',
+				'Wolne ładowanie i słabe wyniki SEO przez przeładowany, przestarzały kod.',
+				'Sztywne, toporne automatyzacje i chatboty, które frustrują użytkowników.',
+				'Brak spójności - osobno postawiona strona, osobny sklep i niepołączone narzędzia.',
+			],
+		},
+
+		{
+			id: 2,
+			heading: 'Dedykowany ekosystem i technologia premium',
+			btnText: 'Moje podejscie',
+			features: [
+				'Projektowanie UX/UI w 100% od zera, idealnie dopasowane do Twojej marki.',
+				'Ekstremalna szybkość Next.js / React i doskonałe oceny Core Web Vitals.',
+				'Inteligentni asystenci AI zintegrowani bezpośrednio z bazą wiedzy Twojej firmy.',
+				'Jedna, spójna i zautomatyzowana machina cyfrowa, która realnie konwertuje ruch w zysk.',
+			],
+		},
+	],
+}

@@ -5,6 +5,7 @@ import WhyUs from './_components/WhyUs/WhyUs'
 import Portfolio from './_components/Portfolio/Portfolio'
 import Kontakt from './_components/Kontakt/Kontakt'
 
+
 export default function Home() {
 	return (
 		<main>

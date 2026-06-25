@@ -7,6 +7,8 @@ import UslugiWhyUs from './WhyUs/UslugiWhyUs'
 import { UslugiWhyUsItems } from '@/data'
 import UslugiManifesto from './Manifesto/UslugiManifesto'
 import { UslugiManifestoItems } from '@/data'
+import UslugiProsCons from './ProsCons/UslugiProsCons'
+import { UslugiProsConsItems } from '@/data'
 
 export async function generateStaticParams() {
 	return slugItems.map(item => ({
@@ -78,13 +80,15 @@ export default async function Uslugi({ params }: { params: { slug: string } }) {
 	const item = UslugiHeaderItems.find(i => i.slug === slug)
 	const itemWhyUs = UslugiWhyUsItems.find(i => i.slug === slug)
 	const itemManifesto = UslugiManifestoItems.find(i => i.slug === slug)
-	if (!item || !itemWhyUs || !itemManifesto) return notFound()
+	const itemProsCons = UslugiProsConsItems[slug as keyof typeof UslugiProsConsItems]
+	if (!item || !itemWhyUs || !itemManifesto || !itemProsCons) return notFound()
 
 	return (
 		<>
 			<UslugiHeader {...item} />
 			<UslugiWhyUs {...itemWhyUs} />
 			<UslugiManifesto {...itemManifesto} />
+			<UslugiProsCons items={itemProsCons} />
 		</>
 	)
 }

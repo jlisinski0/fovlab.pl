@@ -1,4 +1,5 @@
 import { StaticImageData } from 'next/image'
+import { ReactNode } from 'react';
 
 export type tickerItem = {
 	id: number
@@ -116,6 +117,14 @@ export type UslugiWhyUsItem = {
 }
 export type UslugiManifestoItem = {
 	id: number,
-	text: string,
 	slug: string
+	title: ReactNode;
+    description: ReactNode;
+}
+export type ProsConsItem = {
+	id: number
+	slug: string
+	heading: string
+	btnText: string
+	features: string[]
 }
