@@ -7,9 +7,6 @@ import { contactSchema } from '@/lib/contact.schema'
 import type { ZodFormattedError } from 'zod'
 import type { ContactFormData } from '@/lib/contact.schema'
 
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-
 import KontaktSuccess from './KontaktSuccess'
 
 type FormErrors = ZodFormattedError<ContactFormData>
@@ -37,15 +34,10 @@ export default function KontaktRight() {
 	const [isSending, setIsSending] = useState(false)
 
 	useEffect(() => {
-		AOS.init({ duration: 800, once: true })
-	}, [])
-
-	useEffect(() => {
 		if (!isSuccess) return
 		const timer = setTimeout(() => setIsSuccess(false), 5000)
 		return () => clearTimeout(timer)
 	}, [isSuccess])
-
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
 
@@ -68,7 +60,7 @@ export default function KontaktRight() {
 		setIsSending(true)
 
 		try {
-			const result = await emailjs.send(
+			await emailjs.send(
 				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
 				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
 				{
@@ -81,15 +73,10 @@ export default function KontaktRight() {
 				process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
 			)
 
-			console.log('EmailJS sukces:', result)
 			setIsSuccess(true)
 			setFormData(emptyData)
 			formRef.current?.reset()
-		} catch (error: any) {
-			console.error('=== EmailJS Błąd ===')
-			console.error('Cały error:', JSON.stringify(error))
-			console.error('Status:', error?.status)
-			console.error('Text:', error?.text)
+		} catch {
 		} finally {
 			setIsSending(false)
 		}
