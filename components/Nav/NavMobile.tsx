@@ -67,20 +67,20 @@ export default function NavMobile({ state }: { state: (val: boolean) => void }) 
 				</ul>
 
 				<div className='flex flex-wrap gap-2'>
-					<a
+					<Link
 						onClick={() => state(false)}
-						href='#kontakt'
+						href='/#kontakt'
 						className='flex flex-row py-2 px-5 mt-5 gradient text-[13px] text-white rounded-4xl font-medium shadow-midnight shadow-sm  hover:-translate-y-1 transition-transform duration-300 cursor-pointer '>
 						Zamów
 						<Image src={arrow} alt='strzałka pokazująca w prawo' width={15} height={15} className='ml-1' />
-					</a>
+					</Link>
 
-					<a
+					<Link
 						onClick={() => state(false)}
-						href='#kontakt'
+						href='/#kontakt'
 						className='flex flex-row py-2 px-5 mt-5 bg-light_green text-[13px] text-black rounded-4xl font-medium  border border-black/10 hover:-translate-y-1 transition-transform duration-300 cursor-pointer '>
 						Bezpłatna wycena
-					</a>
+					</Link>
 				</div>
 			</div>
 		</motion.div>

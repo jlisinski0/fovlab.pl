@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image'
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
 
 export type tickerItem = {
 	id: number
@@ -9,6 +9,8 @@ export type tickerItem = {
 export type UslugiHeaderItem = {
 	id: number
 	slug: string
+	href1?: string
+	href2?: string
 	label: string
 	headingBefore: string
 	headingHighlight: string
@@ -104,22 +106,22 @@ export type whyUsItem = {
 }
 
 export type UslugiWhyUsItem = {
-	id: number,
-	slug: string,
+	id: number
+	slug: string
 	paragraph: string
 	block: {
-		id: number,
-		icon: StaticImageData | string,
-		alt: string,
-		heading: string,
+		id: number
+		icon: StaticImageData | string
+		alt: string
+		heading: string
 		paragraph: string
 	}[]
 }
 export type UslugiManifestoItem = {
-	id: number,
+	id: number
 	slug: string
-	title: ReactNode;
-    description: ReactNode;
+	title: ReactNode
+	description: ReactNode
 }
 export type ProsConsItem = {
 	id: number

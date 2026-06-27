@@ -9,6 +9,9 @@ import stats from '@/public/icons/stats.svg'
 import apereture from '@/public/icons/aperture.svg'
 import money from '@/public/icons/dollar-sign.svg'
 import cart from '@/public/icons/shopping-cart.svg'
+import clock from '@/public/icons/clock.svg'
+import book from '@/public/icons/book-open.svg'
+import watch from '@/public/icons/watch.svg'
 
 import { uslugiItem } from '@/types'
 import { uslugiCheckItem } from '@/types'
@@ -16,7 +19,6 @@ import { slugItem } from '@/types'
 import { UslugiHeaderItem } from '@/types'
 import { UslugiWhyUsItem } from '@/types'
 import { UslugiManifestoItem } from '@/types'
-import { ProsConsItem } from '@/types'
 
 export const uslugiItems: uslugiItem[] = [
 	{
@@ -94,7 +96,9 @@ export const UslugiHeaderItems: UslugiHeaderItem[] = [
 		paragraph:
 			'Tworzę nowoczesne witryny, które nie tylko zachwycają designem, ale przede wszystkim sprzedają. Wykorzystuję najnowsze technologie, by Twoja firma wyraźnie wyróżniała się na tle konkurencji.',
 		button1: 'Zobacz realizacje',
+		href1: '/#portfolio',
 		button2: 'Bezpłatna konsultacja',
+		href2: '/#kontakt',
 		photo: site,
 		alt: 'Mężczyzna oraz kobieta trzymają torby z zakupami',
 		offer: [
@@ -112,7 +116,9 @@ export const UslugiHeaderItems: UslugiHeaderItem[] = [
 		headingHighlight: 'który realnie',
 		headingAfter: 'zawiększa sprzedaż',
 		button1: 'Rozpocznij sprzedaż',
+		href1: '/#kontakt',
 		button2: 'Bezpłatna konsultacja',
+		href2: '/#kontakt',
 		paragraph:
 			'Tworzę nowoczesne sklepy e-commerce, które nie tylko świetnie wyglądają, ale przede wszystkim maksymalizują Twój zysk. Wykorzystuję szybkie i bezpieczne technologie, by Twoja marka wyraźnie dominowała na rynku w Toruniu i całej Polsce.',
 		photo: shopping,
@@ -133,7 +139,9 @@ export const UslugiHeaderItems: UslugiHeaderItem[] = [
 		headingAfter: 'i sprzedaje 24/7',
 		paragraph: 'Zyskaj setki godzin miesięcznie. Wdróż inteligentnego asystenta, który obsługuje zapytania, rozwiązuje problemy i sprzedaje — 24/7, bez przerw i pomyłek',
 		button1: 'Wdróż AI w swojej firmie',
+		href1: '/#kontakt',
 		button2: 'Bezpłatna konsultacja',
+		href2: '/#kontakt',
 		photo: ai,
 		alt: 'Zdjęcie robotycznej głowy',
 		offer: [
@@ -211,23 +219,23 @@ export const UslugiWhyUsItems: UslugiWhyUsItem[] = [
 		block: [
 			{
 				id: 1,
-				icon: ai,
-				alt: 'test',
+				icon: clock,
+				alt: 'ikona zegara',
 				heading: 'Dostępność 24/7',
 				paragraph: 'Twoi klienci otrzymają natychmiastową pomoc o każdej porze dnia i nocy. Automatyczna obsługa najczęstszych pytań odciąży Twój zespół i skróci czas oczekiwania.',
 			},
 			{
 				id: 2,
-				icon: ai,
-				alt: 'test',
+				icon: book,
+				alt: 'ikona książki',
 				heading: 'Baza wiedzy o Twojej firmie',
 				paragraph:
 					'Bot jest w pełni spersonalizowany i wyszkolony na bazie danych Twojej firmy (pliki PDF, Twoja strona WWW czy regulaminy). Odpowiada precyzyjnie, używając wyłącznie sprawdzonych faktów o Twojej ofercie.',
 			},
 			{
 				id: 3,
-				icon: ai,
-				alt: 'test',
+				icon: watch,
+				alt: 'ikona zegarka',
 				heading: 'Natychmiastowe odpowiedzi',
 				paragraph: 'Koniec z czekaniem na maila czy infolinię. Bot reaguje w ułamku sekundy, dzięki czemu nie tracisz niecierpliwych klientów i drastycznie zwiększasz szansę na domknięcie sprzedaży.',
 			},

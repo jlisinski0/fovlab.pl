@@ -11,7 +11,6 @@ import arrow from '@/public/icons/arrow-right.svg'
 
 export default function Nav() {
 	const { scrollY } = useScroll()
-	const [scrollDirection, setScrollDirection] = useState('down')
 
 	const [isVisible, setIsVisible] = useState(false)
 	const [hidden, setHidden] = useState(false)
@@ -28,11 +27,11 @@ export default function Nav() {
 
 	return (
 		<>
-			<motion.nav className='  bg-pearl_perfect w-full h-18 sticky top-0  z-50' animate={{ y: hidden ? -100 : 0 }} transition={{ duration: 0.4, ease: 'easeInOut' }}>
+			<motion.nav className='  bg-pearl_perfect w-full h-18 sticky top-0  z-50' animate={{ y: hidden ? -100 : 0 }} transition={{ duration: 0.2, ease: 'easeInOut' }}>
 				<div className='flex relative justify-between w-full h-full max-w-7xl mx-auto px-10'>
-					<a href='/#' className='flex items-center w-50'>
+					<Link href='/#' className='flex items-center w-50'>
 						<Image src={fov} alt='Logo "fov"' width={70} height={70} priority style={{ height: 'auto' }} />
-					</a>
+					</Link>
 					<ul className='hidden lg:flex absolute left-1/2 -translate-x-1/2  h-full justify-center items-center gap-12'>
 						{navItems.map(({ id, name, href, icon, menu }) => (
 							<li className='flex flex-col items-center justify-center h-full  group' key={id} onMouseEnter={() => menu && setOpenMenu(id)} onMouseLeave={() => setOpenMenu(null)}>
@@ -65,12 +64,12 @@ export default function Nav() {
 
 					<div className='hidden lg:flex items-center'>
 						<div className='flex gap-5'>
-							<a
-								href='#kontakt'
+							<Link
+								href='/#kontakt'
 								className='flex flex-row py-2 px-12 gradient text-sm text-white rounded-4xl font-medium shadow-midnight shadow-sm  hover:-translate-y-1 transition-transform duration-300 cursor-pointer'>
 								Zamów
 								<Image src={arrow} alt='strzałka pokazująca w prawo' width={17} height={17} className='ml-1' />
-							</a>
+							</Link>
 						</div>
 					</div>
 					<button
@@ -90,7 +89,7 @@ export default function Nav() {
 								initial={{ clipPath: 'inset(0 0 100% 0)' }}
 								animate={{ clipPath: 'inset(0 0 0% 0)' }}
 								exit={{ clipPath: 'inset(0 0 100% 0)' }}
-								transition={{ duration: 0.2, ease: 'easeInOut' }}
+								transition={{ duration: 0.3, ease: 'easeInOut' }}
 								className=' left-0 px-10 absolute top-18 w-full h-60 o bg-pearl_perfect border-b-grey border-b '
 								key={id}
 								onMouseEnter={() => setOpenMenu(id)}
