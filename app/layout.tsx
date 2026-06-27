@@ -4,6 +4,7 @@ import './globals.css'
 import Ticker from '@/components/Ticker'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import AOSProvider from '@/components/AOSProvider'
 
 const playfair_display = Playfair_Display({
 	variable: '--font-playfair_display-sans',
@@ -80,10 +81,12 @@ export default function RootLayout({
 	return (
 		<html lang='pl' className={`${rubik.className} ${playfair_display.variable} ${bad_script.variable}  antialiased`}>
 			<body>
-				<Ticker />
-				<Nav />
-				{children}
-				<Footer />
+				<AOSProvider>
+					<Ticker />
+					<Nav />
+					{children}
+					<Footer />
+				</AOSProvider>
 			</body>
 		</html>
 	)

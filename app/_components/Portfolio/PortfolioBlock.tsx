@@ -1,10 +1,9 @@
 'use client'
 
-import { useMemo, useEffect } from 'react'
+import { useMemo,  } from 'react'
 import PortfolioBlockTag from './PortfolioBlockTag'
 import { portfolioBlockItems } from '@/data'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+
 import Image from 'next/image'
 
 interface Props {
@@ -12,12 +11,7 @@ interface Props {
 }
 
 export default function PortfolioBlock({ active }: Props) {
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-		})
-	}, [])
+
 	const filtered = useMemo(() => {
 		if (active === 'all') return portfolioBlockItems
 		return portfolioBlockItems.filter(item => item.category === active)

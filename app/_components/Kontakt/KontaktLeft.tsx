@@ -1,17 +1,9 @@
-'use client'
 
-import { useEffect } from 'react'
 import KontaktLeftBlock from './KontaktLeftBlock'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+
 
 export default function KontaktLeft() {
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-		})
-	}, [])
+
 	return (
 		<div data-aos='fade-up' data-aos-duration='500'>
 			<div className='flex gap-2 text-[11px] text-light_green uppercase tracking-[.12em] mb-4 before:content-["<"] before:mr-2 before:opacity-50 after:content-[">"] after:ml-2 after:opacity-50'>

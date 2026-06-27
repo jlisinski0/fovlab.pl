@@ -1,8 +1,4 @@
-'use client'
 
-import { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 
 import UslugiBlock from './UslugiBlock'
 import { uslugiItems } from '@/data'
@@ -11,12 +7,7 @@ import Image from 'next/image'
 import UslugiCheck from './UslugiCheck'
 
 export default function UslugiContent() {
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-		})
-	}, [])
+
 	return (
 		<div className='flex flex-col pt-10'>
 			<div className='flex flex-col lg:flex-row gap-1' data-aos='fade-up' data-aos-duration='500'>

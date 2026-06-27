@@ -1,16 +1,4 @@
-'use client'
-
-import { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-
 export default function HeaderLeft() {
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-		})
-	}, [])
 	return (
 		<div data-aos='fade-up' data-aos-duration='500'>
 			<div className='flex items-center bg-black_green w-62 h-8 rounded-2xl border border-border_green z-0'>

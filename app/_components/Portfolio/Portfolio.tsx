@@ -1,17 +1,10 @@
-'use client'
+
 
 import PortfolioContent from './PortfolioContent'
-import { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+
 
 export default function Portfolio() {
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-		})
-	}, [])
+
 	return (
 		<section className='h-auto bg-midnightTwo/99 ' id='portfolio'>
 			<div className='flex flex-col  h-full w-full max-w-7xl mx-auto px-10 py-20 '>

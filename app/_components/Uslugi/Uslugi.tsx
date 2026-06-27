@@ -1,17 +1,8 @@
-'use client'
 
-import { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 import UslugiContent from './UslugiContent'
 
 export default function Uslugi() {
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-		})
-	}, [])
+
 	return (
 		<section className='  h-auto bg-midnightTwo' id='uslugi'>
 			<div className='flex flex-col  h-full w-full max-w-7xl mx-auto px-10 py-20' data-aos='fade-up' data-aos-duration='500'>

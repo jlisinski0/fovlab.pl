@@ -1,17 +1,8 @@
-'use client'
-
-import { useEffect } from 'react'
-import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { UslugiHeaderItem } from '@/types'
+import Link from 'next/link'
 
 export default function UslugiHeaderLeft({ id, label, headingAfter, headingBefore, headingHighlight, paragraph, button1, button2 }: UslugiHeaderItem) {
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-		})
-	}, [])
 	return (
 		<div key={id} data-aos='fade-up' data-aos-duration='500' className=''>
 			<div className='flex items-center bg-black_green py-1.5 px-3 w-fit  rounded-2xl border border-border_green z-0'>
@@ -31,16 +22,16 @@ export default function UslugiHeaderLeft({ id, label, headingAfter, headingBefor
 				</p>
 			</div>
 			<div className='flex flex-wrap gap-2 pt-10' data-aos='fade-up' data-aos-duration='900'>
-				<a
+				<Link
 					href='/#portfolio'
 					className='px-6 py-3 text-center bg-light_green text-midnight text-[12px] md:text-sm lg:text-base font-medium rounded-2xl cursor-pointer hover:-translate-y-1 duration-300 transition-transform'>
 					{button1}
-				</a>
-				<a
+				</Link>
+				<Link
 					href='/#kontakt'
 					className='px-6 py-3 text-center bg-midnightTwo text-light_green border-light_green border text-[12px] md:text-sm lg:text-base font-medium rounded-2xl cursor-pointer hover:bg-light_green hover:text-midnight duration-300 transition-colors'>
 					{button2}
-				</a>
+				</Link>
 			</div>
 		</div>
 	)
