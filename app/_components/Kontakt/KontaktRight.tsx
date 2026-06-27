@@ -162,7 +162,7 @@ export default function KontaktRight() {
 					Budżet orientacyjny
 				</label>
 				<select
-					className='cursor-pointerbg-midnight text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5'
+					className='cursor-pointer bg-midnight  text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5'
 					name='money'
 					id='money'
 					value={formData.money}
