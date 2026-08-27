@@ -91,7 +91,7 @@ export const ServiceHeaderItems: ServiceHeaderItem[] = [
 		slug: 'strony-internetowe',
 		label: 'Strony internetowe',
 		headingBefore: 'Strona, która',
-		headingHighlight: 'sprzedaje —',
+		headingHighlight: 'sprzedaje -',
 		headingAfter: 'nie tylko wygląda',
 		paragraph:
 			'Tworzę nowoczesne witryny, które nie tylko zachwycają designem, ale przede wszystkim sprzedają. Wykorzystuję najnowsze technologie, by Twoja firma wyraźnie wyróżniała się na tle konkurencji.',
@@ -135,7 +135,7 @@ export const ServiceHeaderItems: ServiceHeaderItem[] = [
 		slug: 'chatboty-ai',
 		label: 'Chatboty AI',
 		headingBefore: 'Bot, który',
-		headingHighlight: 'automatyzuje —',
+		headingHighlight: 'automatyzuje -',
 		headingAfter: 'i sprzedaje 24/7',
 		paragraph: 'Zyskaj setki godzin miesięcznie. Wdróż inteligentnego asystenta, który obsługuje zapytania, rozwiązuje problemy i sprzedaje — 24/7, bez przerw i pomyłek',
 		button1: 'Wdróż AI w swojej firmie',
@@ -340,7 +340,7 @@ export const ServiceProsConsItems = {
 				'Strona z gotowego szablonu WordPress, którą może mieć również Twoja bezpośrednia konkurencja.',
 				'Ciężki kod, dziesiątki wtyczek i powolne ładowanie, które skutecznie niszczą Twoje pozycje w Google.',
 				'Ciągłe podatności na ataki hakerskie i konieczność nieustannych, stresujących aktualizacji.',
-				'Ograniczone możliwości rozwoju — jesteś zamknięty wewnątrz sztywnych ram gotowego kreatora.',
+				'Ograniczone możliwości rozwoju - jesteś zamknięty wewnątrz sztywnych ram gotowego kreatora.',
 			],
 		},
 
@@ -349,10 +349,10 @@ export const ServiceProsConsItems = {
 			heading: 'Dedykowana witryna Next.js i kod pisany od zera',
 			btnText: 'Moje podejscie',
 			features: [
-				'Projekt UX/UI stworzony w 100% od zera dla Twojej firmy — bez powtarzalnych schematów, pełna unikalność.',
+				'Projekt UX/UI stworzony w 100% od zera dla Twojej firmy - bez powtarzalnych schematów, pełna unikalność.',
 				'Ultraszybka technologia Next.js / React zapewniająca natychmiastowe ładowanie i perfekcyjne oceny Core Web Vitals.',
 				'Zaawansowana, czysta struktura kodu, która naturalnie winduje Twoją stronę na wyższe pozycje w wyszukiwarce SEO.',
-				'Absolutne bezpieczeństwo i stabilność — brak bazy danych podatnej na ataki i zero zbędnych wtyczek.',
+				'Absolutne bezpieczeństwo i stabilność - brak bazy danych podatnej na ataki i zero zbędnych wtyczek.',
 			],
 		},
 	],
@@ -376,7 +376,7 @@ export const ServiceProsConsItems = {
 			features: [
 				'Indywidualny sklep internetowy Next.js dopasowany do logistyki i realnych potrzeb Twojego biznesu.',
 				'Błyskawiczny proces zakupowy, który maksymalizuje konwersję i drastycznie ogranicza porzucanie koszyków.',
-				'Nieograniczona skalowalność — Twój sklep udźwignie tysiące produktów i nagłe skoki ruchu bez ani jednego zacięcia.',
+				'Nieograniczona skalowalność - Twój sklep udźwignie tysiące produktów i nagłe skoki ruchu bez ani jednego zacięcia.',
 				'Pełna niezależność finansowa i technologiczna — zarządzasz asortymentem bez opłat abonamentowych i prowizji.',
 			],
 		},

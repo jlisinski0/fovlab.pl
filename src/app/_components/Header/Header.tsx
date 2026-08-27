@@ -1,6 +1,5 @@
 import HeaderText from './HeaderText'
 
-
 export default function Header() {
 	return (
 		<header className='relative overflow-hidden h-auto bg-midnightTwo py-20 '>

@@ -22,7 +22,7 @@ export default function UslugiHeader(item: ServiceHeaderItem) {
 					<div className='flex text-center justify-center flex-wrap gap-10'>
 						{offer.map(({ id, number, text }) => (
 							<div key={id} data-aos='fade-up' data-aos-duration='1000'>
-								<p className='text-5xl lg:text-6xl text-pearl_perfect/90 font-bold font-playfair_display'>{number}</p>
+								<p className='text-5xl lg:text-6xl text-light_green font-bold font-playfair_display'>{number}</p>
 								<p className='text-sm pt-2 text-grey/50'>{text}</p>
 							</div>
 						))}

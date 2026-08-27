@@ -1,10 +1,6 @@
 export default function HeaderLeft() {
 	return (
 		<div data-aos='fade-up' data-aos-duration='500'>
-			<div className='flex items-center bg-black_green w-62 h-8 rounded-2xl border border-border_green z-0'>
-				<div className='size-1.5 rounded-full bg-light_green ml-3 mr-2 animate-pulse'></div>
-				<p className='text-[12px] text-light_green uppercase tracking-[.12em]'>Profesjonalne realizacje</p>
-			</div>
 			<div className='pt-5 text-left'>
 				<h1 className='lg:leading-[1.1] text-4xl md:text-5xl lg:text-[74px] text-white font-playfair_display'>
 					Tworzę <br />

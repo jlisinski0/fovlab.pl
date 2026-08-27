@@ -1,11 +1,7 @@
 'use client'
 
-import { FormEvent, useEffect, useState } from 'react'
-import { AnimatePresence } from 'motion/react'
+import { FormEvent, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { contactSchema } from '@/src/lib/contact.schema'
-import type { ZodFormattedError } from 'zod'
-import type { ContactFormData } from '@/src/lib/contact.schema'
 
 import ContactSuccess from './ContactSuccess'
 
@@ -36,11 +32,47 @@ export default function ContactRight() {
 		money: false,
 		message: false,
 	})
+	const [isNotValid, setIsNotValid] = useState({
+		name: false,
+		email: false,
+		service: false,
+		money: false,
+		message: false,
+	})
 
-	const nameValidation = isData.name.length === 0 && isTouched.name
+	const nameTouchValidation = isData.name.length === 0 && isTouched.name
+	const emailTouchValidation = !isData.email.includes('@') && isTouched.email
+	const serviceTouchValidation = isData.service.length === 0 && isTouched.service
 
 	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
+
+		const { name, email, service } = isData
+
+		if (name.length === 0) {
+			setIsNotValid(prevIsNotValid => ({
+				...prevIsNotValid,
+				name: true,
+			}))
+		}
+
+		if (!email.includes('@')) {
+			setIsNotValid(prevIsNotValid => ({
+				...prevIsNotValid,
+				email: true,
+			}))
+		}
+
+		if (service.length === 0) {
+			setIsNotValid(prevIsNotValid => ({
+				...prevIsNotValid,
+				service: true,
+			}))
+			return
+		}
+
+		console.log(isNotValid)
+
 		try {
 			setIsLoading(true)
 
@@ -103,13 +135,24 @@ export default function ContactRight() {
 						onBlur={() => handleTouched('name')}
 						onChange={e => handleEnteredValues('name', e.target.value)}
 					/>
-					{nameValidation && <p className='pt-1 text-red-500 text-sm'>Brak imienia i nazwiska!</p>}
+					{(nameTouchValidation || isNotValid.name) && <p className='pt-2 text-red-500 text-sm'>Brak imienia i nazwiska</p>}
 				</div>
 				<div className='flex flex-col lg:w-1/2'>
 					<label className='uppercase text-white/80 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='email'>
 						Email
 					</label>
-					<input className='bg-midnight text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5' type='email' placeholder='przyklad@test.pl' id='email' autoComplete='email' name='email' />
+					<input
+						className='bg-midnight text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5'
+						type='email'
+						placeholder='przyklad@test.pl'
+						id='email'
+						autoComplete='email'
+						name='email'
+						value={isData.email}
+						onBlur={() => handleTouched('email')}
+						onChange={e => handleEnteredValues('email', e.target.value)}
+					/>
+					{(emailTouchValidation || isNotValid.email) && <p className='pt-2 text-red-500 text-sm'>Niepoprawny adres email</p>}
 				</div>
 			</div>
 
@@ -117,7 +160,13 @@ export default function ContactRight() {
 				<label className='uppercase text-white/80 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='service'>
 					Czego potrzebujesz?
 				</label>
-				<select className='cursor-pointer bg-midnight text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5' name='service' id='service'>
+				<select
+					className='cursor-pointer bg-midnight  text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5'
+					name='service'
+					id='service'
+					value={isData.service}
+					onBlur={() => handleTouched('service')}
+					onChange={e => handleEnteredValues('service', e.target.value)}>
 					<option value=''>Wybierz usługę...</option>
 					<option value='landing-page'>Landing Page</option>
 					<option value='sklep'>Sklep internetowy</option>
@@ -125,13 +174,19 @@ export default function ContactRight() {
 					<option value='pakiet'>Pakiet: Strona + Chatbot</option>
 					<option value='inne'>Coś innego</option>
 				</select>
+				{(serviceTouchValidation || isNotValid.service) && <p className='pt-2 text-red-500 text-sm'>Proszę wybrać usługę</p>}
 			</div>
 
 			<div className='flex flex-col'>
 				<label className='uppercase text-white/80 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='money'>
 					Budżet orientacyjny
 				</label>
-				<select className='cursor-pointer bg-midnight  text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5' name='money' id='money'>
+				<select
+					className='cursor-pointer bg-midnight  text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5'
+					name='money'
+					id='money'
+					value={isData.money}
+					onChange={e => handleEnteredValues('money', e.target.value)}>
 					<option value=''>Wybierz przedział...</option>
 					<option value='lower-3000'>Poniżej 3000zł</option>
 					<option value='3000'>Do 3000zł</option>
@@ -150,6 +205,8 @@ export default function ContactRight() {
 					placeholder='Czym zajmuję się twoja firma? Co chcesz osiągnąć? Kiedy chciałbyś uruchomić projekt?'
 					id='message'
 					name='message'
+					value={isData.message}
+					onChange={e => handleEnteredValues('message', e.target.value)}
 				/>
 			</div>
 			<button
