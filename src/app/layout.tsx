@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Rubik, Bad_Script } from 'next/font/google'
 import './globals.css'
+import Script from 'next/script'
 
 import Nav from '@/src/components/Nav'
 import Footer from '@/src/components/Footer'
 import AOSProvider from '@/src/components/AOSProvider'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const playfair_display = Playfair_Display({
 	variable: '--font-playfair_display-sans',
@@ -81,11 +83,15 @@ export default function RootLayout({
 	return (
 		<html lang='pl' className={`${rubik.className} ${playfair_display.variable} ${bad_script.variable}  antialiased`}>
 			<body>
+				{process.env.NEXT_PUBLIC_COOKIEBOT_ID && (
+					<Script id='Cookiebot' src='https://consent.cookiebot.com/uc.js' data-cbid={process.env.NEXT_PUBLIC_COOKIEBOT_ID} data-blockingmode='auto' strategy='afterInteractive' />
+				)}
 				<AOSProvider>
 					<Nav />
 					{children}
 					<Footer />
 				</AOSProvider>
+				{process.env.NEXT_PUBLIC_GA_ID && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />}
 			</body>
 		</html>
 	)
