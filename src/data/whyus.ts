@@ -4,7 +4,7 @@ export const whyUsItems: whyUsItem[] = [
 	{
 		id: 1,
 		heading: 'Masowe rozwiązania i ograniczone szablony.',
-		btnText: 'Stare podejscie',
+		btnText: 'Stare podejście',
 		features: [
 			'Generyczny design z gotowych kreatorów, który zlewa się z konkurencją.',
 			'Wolne ładowanie i słabe wyniki SEO przez przeładowany, przestarzały kod.',
@@ -16,7 +16,7 @@ export const whyUsItems: whyUsItem[] = [
 	{
 		id: 2,
 		heading: 'Dedykowany ekosystem i technologia premium',
-		btnText: 'Moje podejscie',
+		btnText: 'Moje podejście',
 		features: [
 			'Projektowanie UX/UI w 100% od zera, idealnie dopasowane do Twojej marki.',
 			'Ekstremalna szybkość Next.js / React i doskonałe oceny Core Web Vitals.',

@@ -1,124 +1,132 @@
 'use client'
 
-import { FormEvent, useState } from 'react'
+import { useActionState, useState } from 'react'
 import emailjs from '@emailjs/browser'
 
 import ContactSuccess from './ContactSuccess'
 
-type FormData = {
-	name: string
-	email: string
-	service: string
-	money: string
-	message: string
+type FormState = {
+	errors: {
+		name?: string
+		email?: string
+		service?: string
+		money?: string
+		message?: string
+	}
+	data: {
+		name: string | null
+		email: string | null
+		service: string | null
+		money: string | null
+		message: string | null
+	}
 }
 
-type FormField = keyof FormData
+export default function ContactForm() {
+	const [isSuccess, setIsSucces] = useState(false)
 
-export default function ContactRight() {
-	const [isData, setIsData] = useState({
-		name: '',
-		email: '',
-		service: '',
-		money: '',
-		message: '',
-	})
-	const [isLoading, setIsLoading] = useState(false)
-	const [isSuccess, setIsSuccess] = useState(false)
-	const [isTouched, setIsTouched] = useState({
-		name: false,
-		email: false,
-		service: false,
-		money: false,
-		message: false,
-	})
-	const [isNotValid, setIsNotValid] = useState({
-		name: false,
-		email: false,
-		service: false,
-		money: false,
-		message: false,
-	})
+	const sendAction = async (prevState: FormState, FormData: FormData): Promise<FormState> => {
+		const name = FormData.get('name')
+		const email = FormData.get('email')
+		const service = FormData.get('service')
+		const money = FormData.get('money')
+		const message = FormData.get('message')
 
-	const nameTouchValidation = isData.name.length === 0 && isTouched.name
-	const emailTouchValidation = !isData.email.includes('@') && isTouched.email
-	const serviceTouchValidation = isData.service.length === 0 && isTouched.service
+		const errors: FormState['errors'] = {}
 
-	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-		e.preventDefault()
-
-		const { name, email, service } = isData
-
-		if (name.length === 0) {
-			setIsNotValid(prevIsNotValid => ({
-				...prevIsNotValid,
-				name: true,
-			}))
+		if (!name) {
+			errors.name = 'Proszę podać imię lub nazwisko!'
 		}
 
-		if (!email.includes('@')) {
-			setIsNotValid(prevIsNotValid => ({
-				...prevIsNotValid,
-				email: true,
-			}))
+		if (!email) {
+			errors.email = 'Email nie może być pusty'
 		}
 
-		if (service.length === 0) {
-			setIsNotValid(prevIsNotValid => ({
-				...prevIsNotValid,
-				service: true,
-			}))
-			return
+		if (!service) {
+			errors.service = 'Proszę wybrać chociaż jedną usługę'
 		}
 
-		console.log(isNotValid)
+		if (Object.keys(errors).length > 0) {
+			return {
+				errors,
+				data: {
+					name: typeof name === 'string' ? name : null,
+					email: typeof email === 'string' ? email : null,
+					service: typeof service === 'string' ? service : null,
+					money: typeof money === 'string' ? money : null,
+					message: typeof message === 'string' ? message : null,
+				},
+			}
+		}
+
+		setIsSucces(false)
 
 		try {
-			setIsLoading(true)
-
 			await emailjs.send(
 				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
 				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
 				{
-					name: isData.name,
-					email: isData.email,
-					message: isData.message,
-					money: isData.money,
-					service: isData.service ?? 'Nie wybrano',
+					name: name,
+					email: email,
+					message: message,
+					money: money,
+					service: service ?? 'Nie wybrano',
 				},
 				process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
 			)
+
+			setIsSucces(true)
+
+			setTimeout(() => {
+				setIsSucces(false)
+			}, 2000)
+
+			return {
+				errors: {},
+				data: {
+					name: null,
+					email: null,
+					service: null,
+					money: null,
+					message: null,
+				},
+			}
 		} catch (error) {
 			console.error(error)
-		} finally {
-			setIsLoading(false)
-			setIsSuccess(true)
-			setTimeout(() => {
-				setIsSuccess(false)
-			}, 3000)
+
+			return {
+				errors: { name: 'Wystąpił błąd podczas wysyłania wiadomości.' },
+				data: {
+					name: typeof name === 'string' ? name : null,
+					email: typeof email === 'string' ? email : null,
+					service: typeof service === 'string' ? service : null,
+					money: typeof money === 'string' ? money : null,
+					message: typeof message === 'string' ? message : null,
+				},
+			}
 		}
 	}
 
-	const handleEnteredValues = (id: FormField, value: string) => {
-		setIsData(prevIsData => ({
-			...prevIsData,
-			[id]: value,
-		}))
-		setIsTouched(prevIsTouched => ({
-			...prevIsTouched,
-			[id]: false,
-		}))
+	const initialState: FormState = {
+		errors: {
+			email: undefined,
+			name: undefined,
+			service: undefined,
+			money: undefined,
+			message: undefined,
+		},
+		data: {
+			email: null,
+			name: null,
+			service: null,
+			money: null,
+			message: null,
+		},
 	}
-
-	const handleTouched = (id: FormField) => {
-		setIsTouched(prevIsTouched => ({
-			...prevIsTouched,
-			[id]: true,
-		}))
-	}
+	const [state, formAction, isPending] = useActionState<FormState, FormData>(sendAction, initialState)
 
 	return (
-		<form onSubmit={handleSubmit} className='flex flex-col justify-end gap-5' data-aos='fade-up' data-aos-duration='500'>
+		<form action={formAction} className='flex flex-col justify-end gap-5' data-aos='fade-up' data-aos-duration='500'>
 			<div className='flex flex-col lg:flex-row gap-5'>
 				<div className='flex flex-col lg:w-1/2'>
 					<label className='uppercase text-white/80 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='name'>
@@ -131,11 +139,9 @@ export default function ContactRight() {
 						autoComplete='name'
 						id='name'
 						name='name'
-						value={isData.name}
-						onBlur={() => handleTouched('name')}
-						onChange={e => handleEnteredValues('name', e.target.value)}
+						defaultValue={state.data.name ?? ''}
 					/>
-					{(nameTouchValidation || isNotValid.name) && <p className='pt-2 text-red-500 text-sm'>Brak imienia i nazwiska</p>}
+					{state.errors.name && <p className='pt-2 text-red-500 text-sm'>{state.errors.name}</p>}
 				</div>
 				<div className='flex flex-col lg:w-1/2'>
 					<label className='uppercase text-white/80 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='email'>
@@ -148,11 +154,9 @@ export default function ContactRight() {
 						id='email'
 						autoComplete='email'
 						name='email'
-						value={isData.email}
-						onBlur={() => handleTouched('email')}
-						onChange={e => handleEnteredValues('email', e.target.value)}
+						defaultValue={state.data.email ?? ''}
 					/>
-					{(emailTouchValidation || isNotValid.email) && <p className='pt-2 text-red-500 text-sm'>Niepoprawny adres email</p>}
+					{state.errors.email && <p className='pt-2 text-red-500 text-sm'>{state.errors.email}</p>}
 				</div>
 			</div>
 
@@ -160,13 +164,7 @@ export default function ContactRight() {
 				<label className='uppercase text-white/80 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='service'>
 					Czego potrzebujesz?
 				</label>
-				<select
-					className='cursor-pointer bg-midnight  text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5'
-					name='service'
-					id='service'
-					value={isData.service}
-					onBlur={() => handleTouched('service')}
-					onChange={e => handleEnteredValues('service', e.target.value)}>
+				<select className='cursor-pointer bg-midnight  text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5' name='service' id='service' defaultValue={state.data.email ?? ''}>
 					<option value=''>Wybierz usługę...</option>
 					<option value='landing-page'>Landing Page</option>
 					<option value='sklep'>Sklep internetowy</option>
@@ -174,19 +172,14 @@ export default function ContactRight() {
 					<option value='pakiet'>Pakiet: Strona + Chatbot</option>
 					<option value='inne'>Coś innego</option>
 				</select>
-				{(serviceTouchValidation || isNotValid.service) && <p className='pt-2 text-red-500 text-sm'>Proszę wybrać usługę</p>}
+				{state.errors.service && <p className='pt-2 text-red-500 text-sm'>{state.errors.service}</p>}
 			</div>
 
 			<div className='flex flex-col'>
 				<label className='uppercase text-white/80 font-medium text-[12px] pb-1 lg:text-sm' htmlFor='money'>
 					Budżet orientacyjny
 				</label>
-				<select
-					className='cursor-pointer bg-midnight  text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5'
-					name='money'
-					id='money'
-					value={isData.money}
-					onChange={e => handleEnteredValues('money', e.target.value)}>
+				<select className='cursor-pointer bg-midnight  text-white rounded-2xl border border-[#FBF9E414]  py-3.5 px-4.5' name='money' id='money' defaultValue={state.data.money ?? ''}>
 					<option value=''>Wybierz przedział...</option>
 					<option value='lower-3000'>Poniżej 3000zł</option>
 					<option value='3000'>Do 3000zł</option>
@@ -205,15 +198,14 @@ export default function ContactRight() {
 					placeholder='Czym zajmuję się twoja firma? Co chcesz osiągnąć? Kiedy chciałbyś uruchomić projekt?'
 					id='message'
 					name='message'
-					value={isData.message}
-					onChange={e => handleEnteredValues('message', e.target.value)}
+					defaultValue={state.data.message ?? ''}
 				/>
 			</div>
 			<button
 				className='bg-light_green py-3.5 px-10 text-midnight cursor-pointer rounded-2xl font-medium hover:-translate-y-2 duration-300 transition-transform disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0'
 				type='submit'
-				disabled={!isLoading ? false : true}>
-				{!isLoading ? 'Wyślij' : 'Wysyłanie...'}
+				disabled={isPending}>
+				{isPending ? 'Wysyłanie...' : 'Wyślij'}
 			</button>
 
 			<ContactSuccess open={isSuccess} />

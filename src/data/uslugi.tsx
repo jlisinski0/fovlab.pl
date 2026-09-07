@@ -35,7 +35,7 @@ export const serviceItems: serviceItem[] = [
 		number: '02',
 		img: shoppingbag,
 		alt: 'Ikonka torby na zakupy',
-		subheading: 'sprzedawaj bez ogarniczeń',
+		subheading: 'sprzedawaj bez ograniczeń',
 		heading: 'Sklep Internetowy',
 		p: 'Kompletny sklep z płatnościami, zarządzaniem produktami i panelem admina. Gotowy do sprzedaży od pierwszego dnia — bez limitu produktów.',
 	},
@@ -335,7 +335,7 @@ export const ServiceProsConsItems = {
 		{
 			id: 1,
 			heading: 'Masowe szablony i ograniczenia WordPressa.',
-			btnText: 'Stare podejscie',
+			btnText: 'Stare podejście',
 			features: [
 				'Strona z gotowego szablonu WordPress, którą może mieć również Twoja bezpośrednia konkurencja.',
 				'Ciężki kod, dziesiątki wtyczek i powolne ładowanie, które skutecznie niszczą Twoje pozycje w Google.',
@@ -347,7 +347,7 @@ export const ServiceProsConsItems = {
 		{
 			id: 2,
 			heading: 'Dedykowana witryna Next.js i kod pisany od zera',
-			btnText: 'Moje podejscie',
+			btnText: 'Moje podejście',
 			features: [
 				'Projekt UX/UI stworzony w 100% od zera dla Twojej firmy - bez powtarzalnych schematów, pełna unikalność.',
 				'Ultraszybka technologia Next.js / React zapewniająca natychmiastowe ładowanie i perfekcyjne oceny Core Web Vitals.',
