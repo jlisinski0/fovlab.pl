@@ -1,6 +1,0 @@
-export * from './nav'
-export * from './uslugi'
-export * from './portfolio'
-export * from './kontakt'
-export * from './footer'
-export * from './whyus'

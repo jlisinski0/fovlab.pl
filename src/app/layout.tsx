@@ -1,27 +1,15 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Rubik, Bad_Script } from 'next/font/google'
+import { Inter, Manrope } from 'next/font/google'
 import './globals.css'
-import Script from 'next/script'
 
-import Nav from '@/src/components/Nav'
-import Footer from '@/src/components/Footer'
-import AOSProvider from '@/src/components/AOSProvider'
-import { GoogleAnalytics } from '@next/third-parties/google'
-
-const playfair_display = Playfair_Display({
-	variable: '--font-playfair_display-sans',
-	subsets: ['latin'],
+const inter = Inter({
+	variable: '--font-inter',
+	subsets: ['latin', 'latin-ext'],
 })
 
-const rubik = Rubik({
-	variable: '--font-rubik-mono',
-	subsets: ['latin'],
-})
-
-const bad_script = Bad_Script({
-	weight: '400',
-	variable: '--font-bad_script-mono',
-	subsets: ['latin'],
+const manrope = Manrope({
+	variable: '--font-manrope',
+	subsets: ['latin', 'latin-ext'],
 })
 
 export const metadata: Metadata = {
@@ -81,18 +69,8 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='pl' className={`${rubik.className} ${playfair_display.variable} ${bad_script.variable}  antialiased`}>
-			<body>
-				{process.env.NEXT_PUBLIC_COOKIEBOT_ID && (
-					<Script id='Cookiebot' src='https://consent.cookiebot.com/uc.js' data-cbid={process.env.NEXT_PUBLIC_COOKIEBOT_ID} data-blockingmode='auto' strategy='afterInteractive' />
-				)}
-				<AOSProvider>
-					<Nav />
-					{children}
-					<Footer />
-				</AOSProvider>
-				{process.env.NEXT_PUBLIC_GA_ID && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />}
-			</body>
+		<html lang='pl' className={`${inter.variable} ${manrope.variable} antialiased`}>
+			<body className='font-inter'>{children}</body>
 		</html>
 	)
 }
