@@ -14,11 +14,6 @@
 	--color-gray: #e2e8f0;
 	--color-cta: #f97360;
 	--color-success: #22c55e;
-
-	--font-bad_script: var(--font-bad_script-mono);
-	--font-playfair_display: var(--font-playfair_display-sans);
-	--animate-tickerscroll: tickerScroll 30s linear infinite;
-	--animate-moveUp: moveUp 3s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
 
 @theme inline {
@@ -31,13 +26,29 @@ body {
 }
 
 .sectionClasses {
-	@apply flex flex-col items-center justify-center h-dvh w-full bg-black
+	@apply flex flex-col items-center w-full bg-black;
 }
 
 .divWrapper {
-	@apply max-w-300 mx-auto px-5
+	@apply max-w-300 mx-auto px-5;
+}
+
+.border {
+	@apply border-b border-gray/5;
 }
 
 .btn {
-	@apply rounded-2xl px-4 py-1.5 cursor-pointer 
+	@apply rounded-2xl px-4 py-1.5 cursor-pointer lg:px-5 lg:py-2;
+}
+
+.gradient-text {
+	font-family: system-ui, sans-serif;
+	font-weight: 700;
+	letter-spacing: 0px;
+	line-height: normal;
+	background-image: linear-gradient(90deg, #2563eb 0%, #608ef0e3 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	-webkit-text-fill-color: transparent;
 }
