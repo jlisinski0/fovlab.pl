@@ -8,13 +8,15 @@ import NavClose from './NavClose'
 export default function NavMobile() {
 	const [isVisible, setIsVisible] = useState(false)
 
+
+
 	return (
 		<>
 			<div className='flex items-center h-full md:hidden'>
 				<NavBurger state={isVisible} onClick={() => setIsVisible(prev => !prev)} />
 				<NavClose state={isVisible} onClick={() => setIsVisible(prev => !prev)} />
 			</div>
-			{isVisible && <NavList />}
+			{isVisible && <NavList onClose={() => setIsVisible(false)} />}
 		</>
 	)
 }

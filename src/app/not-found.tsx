@@ -1,9 +1,7 @@
 import { Metadata } from 'next'
-import not_found from '@/public/img/not_found.svg'
-import Image from 'next/image'
 
 export const metadata: Metadata = {
-	title: 'FovLab — Nie znaleziono strony',
+	title: 'FovLab - Nie znaleziono strony',
 	description: `Buduję strony WWW, sklepy e-commerce i chatboty AI, które realnie zwiększają sprzedaż. Działam z Torunia, obsługuję firmy z całej Polski. Zapytaj o bezpłatną wycenę!`,
 
 	robots: {
@@ -38,10 +36,9 @@ export const metadata: Metadata = {
 
 export default function notFound() {
 	return (
-		<section className='h-auto w-full bg-pearl_perfect'>
+		<section className='h-[70dvh] w-full bg-black'>
 			<div className='flex flex-col items-center justify-center w-full h-full px-10 py-20'>
-				<h1 className='text-xl lg:text-4xl pb-10'>Nie znalazłem takiej strony :)</h1>
-				<Image src={not_found} alt='Error 404' width={500} height={500} />
+				<h1 className='text-white font-bold text-xl lg:text-4xl pb-10 font-manrope'>Nie znalazłem takiej strony :)</h1>
 			</div>
 		</section>
 	)

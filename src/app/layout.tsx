@@ -3,6 +3,7 @@ import { Inter, Manrope } from 'next/font/google'
 import './globals.css'
 
 import Nav from '../components/Nav/Nav'
+import Footer from '../components/Footer/Footer'
 
 const inter = Inter({
 	variable: '--font-inter',
@@ -75,6 +76,7 @@ export default function RootLayout({
 			<body className='font-inter'>
 				<Nav />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	)
