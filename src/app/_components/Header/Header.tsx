@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Header() {
 	return (
 		<>
-			<header className='relative overflow-hidden border sectionClasses justify-center h-dvh'>
+			<header className='relative overflow-hidden border sectionClasses justify-center h-dvh' id='top'>
 				<div className='divWrapper'>
 					<div aria-hidden='true' className='pointer-events-none absolute -top-24 -right-20 h-96 w-96 rounded-full bg-gradient-to-tl from-indigo-main/100 via-main/35 to-transparent blur-3xl' />
 					<div aria-hidden='true' className='pointer-events-none absolute top-0 left-2- h-20 w-96 rounded-full bg-gradient-to-tl from-indigo-main/100 via-main/35 to-transparent blur-3xl' />

@@ -1,5 +1,5 @@
 import { portfolioItemsType } from '../types'
-import test from '@/public/img/test.png'
+import fovlab from '@/public/img/fovlab.png'
 
 export const portfolioItems: portfolioItemsType[] = [
 	{
@@ -7,7 +7,7 @@ export const portfolioItems: portfolioItemsType[] = [
 		name: 'fovlab.pl',
 		description: 'Landing page dla mojej firmy',
 		href: 'https://fovlab.pl/',
-		img: test,
+		img: fovlab,
 		alt: 'Zdjęcie poglądowe strony fovlab.pl',
 	},
 ]

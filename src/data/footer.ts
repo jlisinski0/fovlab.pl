@@ -19,7 +19,7 @@ export const footerItemsOne: footerItemsType[] = [
 	{
 		id: 4,
 		name: 'Blog',
-		href: '/#blog',
+		href: '/blog',
 	},
 ]
 
